@@ -1,0 +1,33 @@
+table{
+    width: 90%;
+    margin: auto 20px;
+    /* border-collapse: collapse; */
+    
+}
+table, th, td{
+    border: 1px solid black;
+    padding: 4.9px;
+    border-spacing: 4.9px;
+    border-collapse: collapse;
+
+
+}
+caption{
+    line-height: 70px;
+    color: #e73947;
+    font-size: 47px;
+}
+th{
+    color: #f1faee;
+    background: #192f68;
+}
+
+/* renglones pares */
+tr:nth-child(even){
+    background: #f1faee;
+
+}
+/* renglones impare */
+tr:nth-child(odd){
+    background: #a8dadc ;
+}
