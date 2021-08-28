@@ -77,6 +77,45 @@ def factorial(numero):
         return numero *factorial(numero-1)
     else:
         return 1
-resultado = factorial(5)
+resultado = factorial(6)
 print(f"el factorial de 5 es {resultado}")
 # %%
+
+def imprimir_numero_recursivo(numero):
+    if numero >= 1:
+        print(numero)
+        imprimir_numero_recursivo(numero-1)
+imprimir_numero_recursivo(5)
+
+# %%
+
+def calcular_total(pagoSinImpuesto, impuesto):
+    return pagoSinImpuesto*(impuesto/100+1)
+
+imp = int(input("Ingrese el porcentaje del impuesto"))
+pagoSinIm = int(input("Ingrese el monto a pagar"))
+pagoTotal = calcular_total(pagoSinIm, imp)
+print(f"El pago total incluyendo impuesto es de {pagoTotal}")
+
+# %%
+# conversor de celsius a fahrenheit y viceversa
+
+def celsius_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_celsius(fahrenheit):
+    return (fahrenheit-32) * 5/9
+
+pruebaCelsius = celsius_fahrenheit(80)
+pruebaFahrenheit = fahrenheit_celsius(pruebaCelsius)
+print(f"Celsus convertido: {pruebaCelsius}. Fahrenheit convertido: {pruebaFahrenheit}")
+
+celsiusIngresado = int(input("Ingrese los grados celsius que quiera convertir a fahrenheit"))
+print(f"La conversion de {celsiusIngresado} a fahrenheit es: {celsius_fahrenheit(celsiusIngresado)}")
+
+
+fahrenheitIngresado = int(input("Ingrese los grados fahrenheit que quiera convertir a fahrenheit"))
+print(f"La conversion de {fahrenheitIngresado} a celsius es: {fahrenheit_celsius(fahrenheitIngresado)}")
+
+# %%
+
