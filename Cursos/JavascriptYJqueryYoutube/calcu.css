@@ -1,0 +1,46 @@
+body{
+    background-color: darkslategrey;
+}
+table{
+    background-color:rgb(97, 97, 102);
+    margin: auto;
+    text-align: justify;
+    width: 300px;
+    height: 600px;
+    border: solid grey 3px;
+    border-radius: 20px;
+}
+.numero {
+    background-color: black;
+    margin:0px;
+    padding: 0px;
+    font-size: 30px;
+    width: 133px;
+    height: 90px;
+    color: white;
+    border-radius: 20px;
+}
+.operaciones{
+    margin: 0px;
+    padding: 0px;
+    width: 114px;
+    height: 90px;
+    color:rgb(232, 255, 232);
+    background-color:black;
+    border-radius: 20px;
+    font-size: 40px;
+
+}
+.color_display{
+    text-align: end;
+    color: rgb(9, 173, 9);
+    font-size: 70px;
+    margin: auto;
+    width: 513px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: rgba(48, 46, 46, 0.993);
+}
+.relleno{
+    width: 0px;
+}

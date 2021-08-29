@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="capturarcss.css" type="text/css">
+    <script type="text/javascript" src="libreriaJQ.js"></script>
+    <title>capturar css</title>
+<script>
+
+
+$(document).ready (function(){
+    // var tamDefecto="";
+    document.getElementById("aumenta1").addEventListener("click", aumentar, false)
+    document.getElementById("disminuye1").addEventListener("click", disminuye, false)
+
+})
+
+function disminuye(){
+    var tamDefecto=$("#noticia1").css("font-size");
+    tamDefecto=parseInt(tamDefecto);
+    $("#noticia1").css("font-size", tamDefecto*.94);
+}
+function aumentar(e){
+    var zonaActuacion=e.target.css;
+    alert(e);
+    alert(zonaActuacion);
+    if(zonaActuacion==aumenta1){
+        alert("noti1");
+
+        zonaActuacion="#noticia1";
+    } else if(e.target==aumenta2){
+        alert("noti2");
+        zonaActuacion="#noticia2";
+    } else if(e.target==aumenta3){
+        alert("noti3");
+
+        zonaActuacion="#noticia3";
+    }
+    var tamDefecto=$(zonaActuacion).css("font-size");
+    tamDefecto=parseInt(tamDefecto);
+    $(zonaActuacion).css("font-size", tamDefecto*1.07);
+}
+</script>
+
+
+<!-- <script> -->
+<!-- //   $(document).ready(function(){ -->
+        <!-- // alert("entro") -->
+        <!-- // var colorFondo=$(".parrafo").css("background-color", ); -->
+        <!-- // alert(colorFondo);} )
+        </script> -->
+</head>
+<body><h1>Noticias</h1>
+    <div id="noticia1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque distinctio, expedita, nesciunt asperiores excepturi in adipisci aspernatur quas placeat repellendus nisi error cupiditate eos tempore sit! Quibusdam dicta sed nisi!
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur perspiciatis. Eveniet vero hic qui suscipit deserunt, possimus quisquam sapiente explicabo repellendus laboriosam facere eius, officia cupiditate porro voluptas itaque.
+        <table >
+            <tr>
+               <td style="text-align: left;">
+                  <input type="button" value="aumentar" id="aumenta1">
+                </td>
+                <td class="disminuir">
+                  <input type="button" value="disminuir" id="disminuye1">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="noticia2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit eos sapiente nulla aut quam obcaecati enim est? Est sapiente, dolores nesciunt animi doloribus nam! Eos odio qui quibusdam totam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur perspiciatis. Eveniet vero hic qui suscipit deserunt, possimus quisquam sapiente explicabo repellendus laboriosam facere eius, officia cupiditate porro voluptas itaque.
+       <table >
+           <tr>
+              <td>
+                 <input type="button" value="aumentar" id="aumenta1">
+              </td>
+              <td class="disminuir">
+                 <input type="button" value="disminuir" id="disminuye2">
+               </td>
+           </tr>
+       </table>
+   </div>
+   <div id="noticia3">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos reiciendis eaque asperiores omnis magnam blanditiis quasi, quo necessitatibus reprehenderit ducimus mollitia optio dicta sint voluptatem adipisci tempore et sequi!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur perspiciatis. Eveniet vero hic qui suscipit deserunt, possimus quisquam sapiente explicabo repellendus laboriosam facere eius, officia cupiditate porro voluptas itaque.
+   <table >
+       <tr>
+           <td class="aumentar">
+               <input type="button" value="aumentar" id="aumenta3">
+            </td>
+               <td class="disminuir">
+               <input type="button" value="disminuir" id="disminuye3">
+           </td>
+         </tr>
+   </table>
+</div>
+
+</body>
+</html>

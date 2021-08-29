@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero</title>
+
+</head>
+<body>
+    <table width=24% border="0">
+        <tr>
+            <td>
+                <label for="textfield"></label>
+                <input type="text" name="texfield" id="c_mensaje">
+            </td>
+            <td>
+                <label for="texfield2"></label>
+                <input type="text" name="textfield2" id="c_intentos">
+            </td>
+        </tr>
+
+    </table>  
+      <script>
+     var  aleatorio=Math.round(Math.random()*100);
+     aleatorio=10;
+     var minum=0;
+     var intentos=0;
+     var mensaje=document.getElementById("c_mensaje");
+     var intentoscon=document.getElementById("c_intentos");
+
+     do{
+         minum=prompt("introduce un numero entre 0 y 100");
+        if(aleatorio>minum){
+         mensaje.value="mas alto";
+         mensaje.style.fontSize="18px";
+
+        }
+        if(aleatorio<minum){
+           mensaje.value="mas bajo";
+         mensaje.style.fontSize="18px";
+
+        }
+        intentos++;
+        intentoscon.value=intentos;
+        intentoscon.style.fontSize="18px"
+        intentoscon.style.color="red"
+        intentoscon.style.textAlign="center"
+     }while (aleatorio!=minum)
+     mensaje.style.fontSize="30px"
+     mensaje.value="correcccto"
+    </script> 
+    
+</body>
+</html>

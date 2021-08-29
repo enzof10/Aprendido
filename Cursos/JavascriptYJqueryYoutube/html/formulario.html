@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+<style >
+    #contenedor{
+        width: 27%;
+        background-color: green;
+        margin: auto;
+        padding: 14px;
+    }
+</style>
+<script>
+    var nombre, edad, poblacion
+    nombre=prompt("","introduce aqui tu nombre");
+    do {
+       // nombre=prompt("introduce un nombre correcto")
+        
+    } while (!isNaN(nombre));
+    edad=prompt("introduce tu edad")
+       do{
+       // edad=prompt("introduce una edad correcta");
+        
+    }   while (edad<=0 || edad>=103|| isNaN(edad));
+    poblacion=prompt("introduce tu poblacion")
+     do {
+       //poblacion=prompt("introduce una poblacion correcta")
+        
+    }while (!isNaN(poblacion));
+</script>
+</head>
+<body>
+    <div id="contenedor">
+        <p>nombre: <script>document.write(nombre)</script></p>
+        <p>edad:<script>document.write(edad)</script></p>
+        <p>poblacion:<script>document.write(poblacion)</script></p>
+    </div>
+    
+</body>
+</html>

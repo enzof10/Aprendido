@@ -1,0 +1,23 @@
+#banner{
+    background-color: red;
+    width: 49%;
+    height: 49%;
+    position: absolute;
+    left: 20%;
+    top: 49;
+    font-size: 40;
+    text-align: center;
+}
+p{
+    position: relative;
+    top:49%;
+    
+    background-color: royalblue;
+    display: inline;
+}
+img{
+    float: left;
+    margin: 14;
+    width: 349;
+    height: 200;
+}

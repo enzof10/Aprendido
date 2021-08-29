@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="estil.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendiendo to2</title>
+</head>
+<body>
+    <h1>informacion sobre el producto</h1>
+    <form action="">
+        <fieldset>
+            <legend>datos basicos</legend>
+            <label for="nombres" >Nombres</label>
+            <br>
+            <input type="text" id="nombres" size="50" placeholder="nombres">
+            <br>
+            <br>
+            <label for="descripcion">descripcion</label>
+            <br>
+            <textarea name="descripcion" id="descripcion" cols="50" rows="10" placeholder="descripcion">descripcion</textarea>
+            <br>
+            <br>
+            <label for="foto">foto</label>
+            <input type="file" id="foto">
+            <br>
+            <input type="checkbox" id="añadir"> <label for="añadir">añadir contador de visitas</label> 
+        </fieldset>
+        <fieldset>
+            <legend>Datos economicos</legend>
+            <label for="precio">precio</label> <input type="text" size="3" maxlength="17">$
+            <label for="impuestos">impuestos</label>
+            <select name="impuestos" id="impuestos">
+                <option value="">4%</option>
+                <option value="">7%</option>
+                <option value="">17%</option>
+                <option value="">
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </option>
+                
+            </select>
+            <br>
+            <label for="promo">promocion</label>
+            <input type="radio" name="promo" id="promo" value="ninguno"><label for="ninguno">ninguno</label>
+            <br>
+            <input type="radio" name="promo" id="gratis"><label for="gratis">trasporte gratis</label>
+            <br>
+            <input type="radio" name="promo" id="descuento"><label for="descuento">descuento</label> 
+            <br>
+            <input type="radio" name="promo" id="nide">
+            <br>
+            <br>
+            <br>
+            <label for="nide">nidea</label> 
+        </fieldset>
+    </form>
+</body>
+</html>

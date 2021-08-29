@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/remover.css">
+    <script type="text/javascript" src="/js/libreriaJQ.js"></script>
+    <title>Cambiando atributos css con javascript</title>
+    <script> 
+    alert("funciona el script");
+        $(document).ready(function(){
+            alert("entro a la funcion");
+            $("#cursos").addClass("linkdestacacursos");  
+        })
+    </script>
+</head>
+<body>
+    <div id="contieneEnlaces">
+        <a href="http://www.pildorasinformaticas.com" target="_blank" class="cursos">
+            pildorasinformaticas
+        </a><br>
+        <a href="http://wwww.google.com" target="_blank">
+            Google
+        </a><br>
+        <a href="http://www.youtube.com" target="_blank" class="cursos">
+           youtube
+        </a><br>
+        <a href="/html/buclefor.html" target="_blank">
+            remover y remplazar
+        </a><br>
+        <a href="http://news.google.es/" target="_blank"> google noticias
+        </a><br>
+        <a href="/html/funciones.html"> funciones
+        </a><br>
+       
+    </div> 
+    <table width="100%" border="2px">
+          <tr>
+              <td>
+                  cursos destacados <input type="button" value="cursos" id="cursos">
+              </td>
+              <td>
+                  informacion adicional <input type="button" value="informacion" id="informacion">
+              </td>
+          </tr>
+        </table>
+</body>
+</html>

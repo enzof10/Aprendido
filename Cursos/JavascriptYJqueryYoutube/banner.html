@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/libreriaJQ.js"></script>
+   <link rel="stylesheet" href="css/banner.css">
+    <title>Banner con cierre remov y</title>
+    <script>
+    $(document).ready(function(){
+        alert("entro a ready");
+    // var z=document.getElementById("cerrar");
+      // z.addEventListener("click", cerrar_banner, false);
+       document.getElementById("cerrar")
+       .addEventListener("click", cerrar_banner, false);
+    //    document.getElementById("arbol").addEventListener("click", carrito, false);
+     var imagenes=document.querySelectorAll("#carrete img");
+      for(var i=0;i<4; i++){
+          imagenes[i].addEventListener("click", carrito, false)
+      }
+    }
+    );
+    function carrito(num){
+     
+        alert("entro al carrito");
+       if(num.target==arbol){
+        $("#arbol").replaceWith("<div id=arbol >agregado al carrito</div>");
+        }
+       if(num.target==`amigos`){
+        $("#amigos").replaceWith("<div id=`amigos`> agregado al carrito</div>");
+        }   
+        if(num.target==friends){
+        $("#friends").replaceWith("<div id=`friends`> agregado al carrito</div>");
+        } 
+        if(num.target==snap){
+        $("#snap").replaceWith("<div id=`snap`> agregado al carrito</div>");
+        }
+    }
+    function cerrar_banner(){
+        alert("entro a cerrar");
+        $("#banner").remove();
+    }
+
+    </script>
+</head>
+<body>
+    <div id="banner">
+        banner de prueba
+        <p id="cerrar">cerrar</p>
+    </div>
+    <div id="carrete">
+        <img src="arbol.jpg" id="arbol" width="499" name="imagen1" >
+        <img src="amigos.jpg" id="amigos" width="499">
+        <img src="friends.jpg" id="friends" width="499">
+        <img src="Snapchatpibas.jpg" id="snap" width="499">
+    </div>
+</body>
+</html>

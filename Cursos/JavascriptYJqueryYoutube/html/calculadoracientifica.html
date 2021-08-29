@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcu.css" type="text/css">
+    <script type="text/javascript" src="calcu.js" ></script>
+    <title>calculadora cientifica</title>
+
+
+</head>
+<body>
+    <table>
+        <tr >
+            <th scope="col" colspan="4"><input type="text" class="color_display" id="display"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="operaciones" id="botonmas" value="+" onclick="operar(`+`)"></td>
+            <td><input type="button" class="operaciones" id="botonmenos" value="-" onclick="operar(`-`)"></td>
+            <td><input type="button" class="operaciones" id="botonmulti" value="*" onclick="operar(`*`)"></td>
+            <td><input type="button" class="operaciones" id="botondivi" value="/" onclick="operar(`/`)"></td>
+        </tr>
+        <tr>
+            <td><input type="button"  class="numero" id="num7" value="7" onclick="display_numeros(7)"></td>
+            <td><input type="button" class="numero" id="num8" value="8" onclick="display_numeros(8)"></td>
+            <td><input type="button" class="numero" id="num9" value="9" onclick="display_numeros(9)"></td>
+            <td><input type="button" class="operaciones" id="borrar" value="C" onclick="borrar()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="numero" id="num4" value="4" onclick="display_numeros(4)"></td>
+            <td><input type="button" class="numero" id="num5" value="5" onclick="display_numeros(5)"></td>
+            <td><input type="button" class="numero" id="num6" value="6" onclick="display_numeros(6)"></td>
+            <td><input type="button" class="numero" id="num3" value="cifra" onclick="ci()"></td>          
+
+            
+        </tr>
+        <tr>
+            <td><input type="button" class="numero" id="num1" value="1" onclick="display_numeros(1)"></td>          
+            <td><input type="button" class="numero" id="num2" value="2" onclick="display_numeros(2)"></td>          
+            <td><input type="button" class="numero" id="num3" value="3" onclick="display_numeros(3)"></td>   
+            <td><input type="button" class="numero" id="num3" value="acu" onclick="acu()"></td>          
+
+        </tr>
+        <tr>
+            <td><input type="button" class="numero" id="num0" value="0" onclick="display_numeros(0)"></td>          
+            <td><input type="button" class="numero" id="num." value="." onclick="display_numeros(.)"></td>          
+            <td colspan="2"><input type="button" class="numero" id="=" value="=" onclick="igualar()"></td>          
+        </tr>
+        <script>
+            document.getElementById("display").value=0;
+        </script>
+
+    </table>
+    
+</body>
+</html>
