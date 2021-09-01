@@ -19,7 +19,7 @@ print(persona1.apellido)
 # %%
 # el nombre del parametro puede ser cualwuiera pero se recomienda nombre de paramero igual al atributo de nuestra clase
 # el ojeto es como una plantilla
-# la clase nos va a permitir definir las caracteristicas de nuestros objetos
+# la clase nos va a permitir definir los valores de los metodos de nuestros objetos
 
 class persona:
     def __init__(Self, nombre, apellido, edad):
@@ -34,11 +34,16 @@ print(persona1.apellido)
 print(persona1.edad)
 
 persona2 = persona("carla", "gomez", 30)
-print(f"objeto persona 2 : {persona1.nombre} {persona2.apellido} {persona2.edad}")
+print(f"objeto persona 2 : {persona2.nombre} {persona2.apellido} {persona2.edad}")
 
+# aca les asigno otras caracteristicas a los metodos
+persona1.nombre = "juan carlos"
+persona1.apellido = "raul"
+persona1.edad = 32
+print(f"objeto persona 1 : {persona1.nombre} {persona1.apellido} {persona1.edad}")
+
+print
 # cada objeto tiene sus propios valores
 
 
-
-
-# %%
+ # %%
