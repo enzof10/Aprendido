@@ -34,7 +34,7 @@ a=[i for i in tp if i < 5]
 print(a)
 
 # %%
-# un seet no permite elementos duplicados
+# un set no permite elementos duplicados
 
 planetas = {"marte","jupiter","venus"}
 print(planetas)
@@ -59,4 +59,10 @@ print(planetas)
 
 
 
+# %%
+cosas = []
+for i in range(1,7):
+    cositas = input("Ingrese las cosas")
+    cosas[i] = cositas
+print(cosas)
 # %%
