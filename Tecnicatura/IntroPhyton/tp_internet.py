@@ -190,3 +190,13 @@ print("El mínimo es " + str(min))
 print("El máximo es " + str(max))
 
 # %%
+
+def number_menor(**numbers):
+    list = [numbers]
+    number = list[0]
+
+    for i in list:
+        if number > i:
+            number = i
+print(number_menor[20, 1, 32, 34])
+# %%

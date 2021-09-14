@@ -47,3 +47,9 @@ print
 
 
  # %%
+class paises:
+    def __init__(self):
+        self.paisees = "titulo" 
+        self.algo = "otro algo"
+
+print(paises.pai)
