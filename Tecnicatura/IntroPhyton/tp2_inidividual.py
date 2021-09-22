@@ -90,3 +90,41 @@ def cantidad_latioamericanos(listaDic):
     return (listaCiudades, cantC, len(listaCiudades), len(cantC))
 print(cantidad_latioamericanos(leer_datos('MOCK_DATA (1).csv')))
 # %%
+def leer_datos(nombre_archivo):
+    ''' Devuelve una lista de diccionarios con la información del datos del archivo especificado '''
+    import csv
+    
+    datos_dict = []
+    try:
+        f = open(nombre_archivo, 'rt', encoding='utf8')
+        filas = csv.reader(f)
+        cabecera = next(filas)
+        for fila in filas:
+            item =  dict(zip(cabecera,fila))
+            datos_dict.append(item)
+        f.close()
+    except Exception as e:
+        datos_dict.append(f'A sucedido un Error {e}')
+    finally:
+        return datos_dict
+
+mis_datos = leer_datos("MOCK_DATA (1).csv")
+
+def colores_fav (listadic):
+    """ esta funcion recibe como parametros la lista de diccionario dada
+     y devuelve contactos agrupados por color favorito"""
+    
+    dicColores = {}
+    count = 0
+    # entra a la lista y recorre cada diccionario
+    for dic in listadic:
+        # asigo cada color de cada usuario a la variable colores
+        colores = dic["colorfavorito"]
+        # compara los colores de cada usuario con el dic que armamos
+        if colores in dicColores:
+            dicColores [colores] = dicColores[colores] +1
+        else:
+            dicColores [colores] = 1
+        print(dicColores)
+colores_fav(mis_datos)
+# %%

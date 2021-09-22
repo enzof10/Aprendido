@@ -56,3 +56,37 @@ for ciudad, cantidad in zip(ciudades, cantidades):
     print (f"{ciudad} tiene {cantidad}")
 # hay ciudades con comillas simples, arreglar el error
 # %%
+# 6. Armar una función que tenga por parámetro la lista de diccionarios dada y devuelva
+# una lista de diccionarios con los datos de los contactos que se encuentren en un rango
+# de edad pasado por parámetros.
+def leer_datos(nombre_archivo):
+    ''' Devuelve una lista de diccionarios con la información del datos del archivo especificado '''
+    import csv
+    
+    datos_dict = []
+    try:
+        f = open(nombre_archivo, 'rt', encoding='utf8')
+        filas = csv.reader(f)
+        cabecera = next(filas)
+        for fila in filas:
+            item =  dict(zip(cabecera,fila))
+            datos_dict.append(item)
+        f.close()
+    except Exception as e:
+        datos_dict.append(f'A sucedido un Error {e}')
+    finally:
+        return datos_dict
+
+def usuarios_edad(listaDic, edadMinima, edadMaxima):
+    """Esta funcion devuelve una lista de diccionarios con la cantidad de usuarios dentro del las edades"""
+    for i in range(len(listaDic)):
+        edadUusuario = [listaDic[i]["fechanac"]]
+        edad = edadUusuario[-4:]
+        print(edad)
+        ed = int(edad)
+        print(ed)
+        print(listaDic[i]["fechanac"])
+        if edadMaxima > listaDic[i]["fechanac"] > edadMinima:
+            print(listaDic[i]["fechanac"])
+usuarios_edad(leer_datos('MOCK_DATA (1).csv'), 10, 30)
+# %%

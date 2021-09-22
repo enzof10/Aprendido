@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario en HTML</h1>
+   <!-- con metodo get se envian los datos al servidor visualidzandolos en la url -->
+    <!-- con novalidate pierde la validez de informacion de adentro -->
+    <form method="GET" action="mi_servidor" target="_blank" autocomplete="off">
+        <!-- action es donde va la peicion del servidor y traget para que se abra en otra ventana -->
+        <fieldset>
+            <legend>Formulario contacto</legend>
+                <!-- name sirve para el servidor -->
+                <!-- value es el valor por defecto -->
+                <!-- placesholder es un valor que no aparece pero no esta -->
+                <!-- required es para que el campo sea requerido si o si -->
+                <label for="idPersona">Persona:</label>
+                <!-- readonly es para el id para la base de datos -->
+                <input type="text" id="idPersona" name="idPersona" readonly="true" value="10" disabled>
+                <br>
+                <!-- informacion para la base de datos oculta -->
+                <input type="hidden" name="sistema" id="sistema" value="SAP">
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" value="Nombre" required="true">
+                <br>
+                <label for="apellido">Apellido:</label>
+                <br>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido aqui" required="true">
+                <br>
+                <label for="genero">Genero:</label>
+                <br>
+                <label for="femenino">femenino </label>
+                <input type="radio" id="femenino" name="genero">
+                <label for="masculino">masculino:</label>
+                <input type="radio" id="masculino" name="genero">
+                
+                <br>
+                <!-- <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                -->
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="edad">Edad:</label>
+                <br>
+                <input type="number" name="edad" id="edad">
+                <br>
+                <label for="autos">Marcas de autos favoritas</label>
+                <!-- con el atributo multiple se pueden seleccionar muchas cosas en el select -->
+                <select name="autos" id="autos" multiple="true">
+                    <option value="volvo">Volvo</option> 
+                    <option value="vmw">Vmw</option>
+                    <option value="audi" selected="true">Audi</option>
+                    <!-- al servidor manda el value -->
+                </select>
+                <br>
+                <input type="reset" value="restablecer">
+                <input type="submit" value="Enviarrr">
+                <input type="submit" value="Enviar no validate" formnovalidate="formnovalidate" >
+    </fieldset>
+    </form>
+</body>
+</html>
