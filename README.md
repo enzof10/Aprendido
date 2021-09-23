@@ -1,1 +1,1 @@
-En este repositorio voy subiendo lo que voy aprendiendo tanto en la tecnicatura como en los cursos de forma autodidacta
+En este repositorio ire subiendo lo que voy aprendido, tanto en la tecnicatura como en los cursos que hare de forma autodidacta
