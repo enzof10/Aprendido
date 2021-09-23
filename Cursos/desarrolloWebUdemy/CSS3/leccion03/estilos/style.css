@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    color: #e73947;
+}
+div{
+    padding: 10px;
+    border: 14.9px solid #477b9d;
+    margin: 20px;
+    background: #f1faee;
+    width: 300px;
+    /* outline no ocupa nada en ancho ni alto */
+    /* si no hay mergen el outline se puede superponer con otra cosa*/
+    outline: 10px solid #a8eadc;
+    /* padding mas borde mas ancho es el total= 349px*/
+    outline-offset: 10px ;
+
+}

@@ -1,4 +1,19 @@
-h1{
-    color: red;
-    text-align: right;
+*{
+    background-color: ghostwhite;
+    color: cornflowerblue;
+}
+#titulo{
+    color: crimson;
+    text-align: center;
+    background: gainsboro;
+}
+.centrar{
+    text-align: center;
+}
+.texto_grande{
+    font-size:large;
+}
+h1, h2, p{
+    color: crimson;
+    text-align: center;
 }

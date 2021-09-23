@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+}
+.rojo{
+    border: 1px solid hsl(0, 68%, 42%);
+}
+.rosa{
+    border: 10px dashed rgb(204, 104.9, 104.9);
+    /* background-color: hotpink; */
+}
+.amarillo{
+    border: 10px double rgb(255, 215, 0);
+    /* background-color: gold; */
+}
+.azul{
+    border: 10px dotted hsl(174, 72%, 56%);
+    /* background-color: turquoise; */
+}
+.punteado{
+    border-style: dotted;
+    border-width: 10px 4.9px 3px 2px ;
+}
+.discontinuo{
+    border-style: dashed;
+    border-width: thin;
+    border-width: medium;
+}
+.solido{
+    border: 10px solid red;
+    border-width: thick thin medium;
+}
+.doble{
+    border: 4px double;
+    
+}
+.surco{
+    border: 10px groove;
+}
+.cresta{
+    border: 10px ridge;
+}
+.recuadro{
+    border: 10px inset;
+}
+.ouset{
+    border: 10px outset;
+}
+.sin_borde{
+    border: none;
+}
+.oculto{
+    border: hidden;
+}
+.mixto{
+    border-style: dotted solid dashed groove;
+}
