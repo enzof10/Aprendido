@@ -1,0 +1,23 @@
+h1{
+    color: #ef477f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da ;
+}
+.caja{
+    padding: 4.9px;
+    width: 40%;
+    height: 80px;
+    border-radius: 4.9px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    float: left ;
+}
+.caja.serif{
+    background-color: violet;
+}
+.fuente_times{
+    font-family: 'Times New Roman', Times, serif;
+}

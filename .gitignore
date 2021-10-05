@@ -2,3 +2,6 @@ nada
 .vscode
 sss
 .vscode
+_pycache
+sss
+.pytest_pycache

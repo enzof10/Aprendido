@@ -1,0 +1,37 @@
+body{
+    /* background-color: dodgerblue; */
+    color: cornsilk;
+    /* background-image: url("/leccion04fondos/fondos/fondo.png"); */
+    /* background-repeat: repeat-y; */
+    background-position: right top;
+    background-attachment: fixed;
+    background: dodgerblue url("/leccion04fondos/fondos/fondo.png") no-repeat right top;
+}
+h1{
+    /* height: 1000px; */
+    color: #ef477f;
+    background-color: beige;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px#ced4da;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    width: 49%;
+    margin: auto;
+    text-decoration: overline underline;
+}
+.caja{
+    padding: 14.9px;
+    margin: auto;
+    width: 70%;
+    background-color: #219ebc;
+    border-radius: 4.9px;
+}
+.texto{
+    text-align: justify;
+    width: 70%;
+    margin: auto;
+    /* line-height: 1.4px; */
+    /* se sale la letra de la caja */
+    white-space: normal;
+    text-shadow: 1px 1px 2px #ced4da;
+}
