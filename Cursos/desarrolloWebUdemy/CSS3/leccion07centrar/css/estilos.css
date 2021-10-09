@@ -1,0 +1,65 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+
+div{
+    max-width: 49%;
+    border: 3px solid firebrick;
+    margin: auto;
+}
+.estatico{
+    position: static;
+    /* no se le puede agregar top o left  */
+}
+.relativa{
+    position: relative;
+    top: 100px;
+    left: 49px;
+    bottom: 190px;
+    right: 49px;
+    /* se mueve en funcion de su ultima ubicacion  */
+    /* no afecta en nada a los demas elementos */
+}
+.fixed{
+    position: fixed;
+    top: 3px;
+    left: 0px;
+    /* para menus de navegacion o chats */
+    /* se mantiene fijo */
+    /* se superpone con los elementos  */
+    /* los demas elementos toman su lugar */
+    /* se posiciona respecto del view port  */
+}
+.absoluta{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* toma como referencia el elemento padre si tiene posicion absolute */
+
+}
+.envuelto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* toma como referencia el elemento padre si tiene posicion absolute */
+    
+}
+.contenedor{
+    position: relative;
+    border: 2px solid black;
+    top: 131px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    border: 3px solid grey;
+    /* primero funciona como un elemento relativo */
+    /* despues si bajo y hay scroll funciona coo fixed */
+    /* no funciona en inetet explore y en safari tiene que llevar lo sig: */
+    position: -webkit-sticky;
+
+}

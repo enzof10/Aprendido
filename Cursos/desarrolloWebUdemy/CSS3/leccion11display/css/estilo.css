@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    color: #447b9d;
+}
+p.contenedor{
+    width: 80%;
+    height: 20%;
+    overflow: auto;
+    margin: auto;
+    border: 3px dashed #a8dadc;
+
+}
+span{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    background-color: #a8dadc;
+    border: 1px solid #447b9d;
+    padding: 4.9px;
+    /* los elementos de block les puedo modificar el padding y margin  */
+    /* display: block; */
+    /* inline block para que no ocupe toda una linea pero respete las propieedades */
+    display: inline-block;
+}
+ul.menu{
+    list-style: none;
+    /* para sacar el redondelito  */
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    /* si uso inline solo no puedo darle margin y padding  */
+    padding: 14.9px;
+    margin: 20px;
+    background-color: #e73947;
+    border-radius: 4.9px;
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: 600;
+}

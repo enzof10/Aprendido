@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularos</title>
+    <link rel="stylesheet" href="css/estilos4.css">
+</head>
+<body>
+    <div class="formulario">
+        <h1>iDESWEB</h1>
+        <h3>Formulario de registro</h3>
+        <form action="#">
+            <fieldset>
+                <legend>¿Quien eres?</legend>
+                    <label for="nombre">Nombre</label>
+                        <br>
+                        <input type="text" name="Nombre" id="nombre" placeholder="Nombre">
+                <br>
+                    <label for="apellidos">Apellidos</label>
+                        <br>
+                        <input type="text" name="Apellidos" id="apellidos" placeholder="Apellidos">
+                <br>
+                    <label for="correo">Correo electronico</label>
+                        <br>
+                        <input type="email" name="correo" id="correo" placeholder="correo">
+                <br>
+                    <label for="dia">Fecha de nacimiento</label>
+                        <br>
+                       <select name="dia" id="dia">
+                    <option>Día</option>
+                    </select>
+
+                    <select name="mes" id="mes">
+                    <option>Mes</option>
+                    </select>
+
+                    <select name="anyo" id="anyo">
+                    <option>Año</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>¿De donde eres?</legend>
+                    <label for="ciudad">Ciudad</label>
+                    <br>
+                    <input type="text" name="ciudad" id="ciudad" placeholder="ciudad">
+                <br>
+                    <label for="cpostal">Codigo postal</label>
+                    <br>
+                    <input type="number" max="7" name="cpostal" id="cpostal">
+                    <br>
+                    <label for="pais">Pais</label>
+                    <br>
+                    <select name="pais" id="pais">
+                    <option>Argentina</option>
+                    <option>Bolivia</option>
+                    <option>Brasil</option>
+                    <option>Pais</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>¿COMO QUIERES INICIAR SESION?</legend>
+                    <label for="nombreUsuario">Nombre de usuario</label>
+                    <br>
+                    <input type="text" name="nombreUsuario" id="nombreUsuario">
+                <br>
+                    <label for="contrasenya">Contrasena</label>
+                    <br>
+                    <input type="password" max="7" name="contrasenya" id="contrasenya" >
+                    <br>
+                    <label for="contrasenya">Vuelve a escribir tu contraseña</label>
+                    <br>
+                    <input type="password" max="7" name="contrasenya" id="contrasenya" >
+                    <br>
+            </fieldset>
+            <fieldset>
+                <legend>Condiciones de registro</legend>
+                <label for="condiciones">Deseo recibir las ofertas de iDESWEB</label>
+                <input type="radio" name="condiciones" id="porDia">
+                    <label for="porDia">Una vez al dia</label>
+                <br>
+                <input type="radio" name="condiciones" id="porSemana">
+                     <label for="porSemana">Una vez a la semana</label>
+                <input type="radio" name="condiciones" id="porMes">
+                     <label for="porMes">Una vez al mes</label>
+                <br>
+                <input type="radio" name="condiciones" id="terminos">
+                  <label for="terminos">Acepto los terminos y condiciones</label>
+
+                
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

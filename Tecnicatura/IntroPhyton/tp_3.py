@@ -1,4 +1,4 @@
-# %%
+#  %%
 # 1) Desarrollar una función que reciba tres números enteros positivos y verifique si
 # corresponden a una fecha válida (día, mes, año). Devolver True o False según
 # la fecha sea correcta o no. Realizar también un programa para verificar el
@@ -30,10 +30,27 @@ fecha_validacion(dia, mes, año)
 # de $50, 1 billete de $20, 1 billete de $10 y 3 billetes de $1.
 
 def vuelto_compra(comprado, entregado):
+    billetes = [500, 100, 50, 20, 10, 5 , 1]
+    cantidadDevuelta = {}
     if comprado > entregado:
         return ("Error, el dinero es insuficiente")
     else:
         vuelto = entregado - comprado
         while vuelto != 0:
+            for billete in billetes:
+                    if vuelto % billete == 0:
+                        vuelto = vuelto / billete
+                        cantidadDevuelta[billete] = vuelto / billete
+                    elif vuelto / billete > 1:
+                        vuelto = vuelto % billete
+                        cantidadDevuelta[billete] = int(vuelto / billete)
+                    # else:
+                    #     vuelto = vuelto - billete
+                    #     cantidadDevuelta[billete] = 1
+        return cantidadDevuelta
+
+print(vuelto_compra(3, 100))
+        
+
             
 # %%

@@ -1,0 +1,14 @@
+input:hover{
+    background: red;
+}
+input:focus{
+    background: yellow;
+}
+body{
+    margin: auto;
+    width: 70%;
+}
+h1{
+    text-align: center;
+    
+}

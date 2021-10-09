@@ -14,6 +14,8 @@ persona1 = persona()
 print(persona1.nombre)
 print(persona1.edad)
 print(persona1.apellido)
+algo =["enzo", "nada"]
+print(algo[0])
 
 
 # %%

@@ -1,0 +1,4 @@
+div.contenedor p::selection{
+    background: yellow;
+    color: red;
+}

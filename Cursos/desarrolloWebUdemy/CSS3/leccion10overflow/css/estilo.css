@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+div.contenedor.flotado{
+    border: 3px dashed greenyellow;
+    width: 30%;
+    margin: auto;
+    /* height: 200px; */
+    /* overflow: visible; */
+    /* overflow: hidden; para que se recorte ello que sobresale */
+    /* overflow: scroll; se muestra aunque no sobresalga */
+    /* overflow: auto; solo se pone scroll en caso necesario */
+    /* solamente sirve si le especifico un alto o ancho */
+    overflow-x: scroll;
+    /* se flotan los dos la izquierda */
+}
+div.contenedor.flotado{
+    float: left;
+
+}
+div.contenedor.flotado.contenedor1{
+    border: 3px solid greenyellow;
+}
+div.contenedor.flotado.contenedor2{
+    border: 3px dashed cornflowerblue;
+    float: right;
+}
+div.contenedor.contenedor3{
+    width: 30%;
+    clear: both;
+    border: 3px dashed darkorange;
+    margin: auto;
+} 
+

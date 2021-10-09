@@ -1,0 +1,19 @@
+body{
+    max-width: 964px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+aside{
+    width: 26%;
+    float: left;
+}
+section{
+    max-width: 70%;
+    float: right;
+}
+.columnas li{
+    width: 33%;
+    float: left;
+}
