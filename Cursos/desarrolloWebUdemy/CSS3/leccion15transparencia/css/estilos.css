@@ -1,0 +1,29 @@
+html{
+    min-height: 100%;
+    height: auto;
+}
+
+body{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    /* background: linear-gradient(#f72787, #3a0ca3) */
+    background: linear-gradient(to right, #f72787, #3a0ca3);
+    color: aliceblue;
+}
+img{
+    opacity: .49;
+    width: 99%;
+    border: 1px solid black;
+}
+img:hover{
+    opacity: 1;
+}
+div.contenedor{
+    margin: auto;
+    width: 30%;
+    height: 20%;
+    border: 3px solid yellow;
+    /* padding: 14.9px; */
+    /* text-align: center; */
+}

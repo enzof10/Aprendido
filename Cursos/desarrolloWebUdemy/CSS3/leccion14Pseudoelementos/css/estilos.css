@@ -2,3 +2,19 @@ div.contenedor p::selection{
     background: yellow;
     color: red;
 }
+div.contenedor p::first-line{
+    font-variant: small-caps;
+    color: red;
+}
+div.contenedor p::first-letter{
+    font-size: 1.49em;
+}
+div.contenedor p::before{
+    /* algo antes */
+    content: "- ";
+}
+div.contenedor p::after{
+    content: " -";
+    /* algo despues */
+    /* content: url(/); */
+}

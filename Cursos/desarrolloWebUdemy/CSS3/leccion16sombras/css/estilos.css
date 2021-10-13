@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 4.9px grey;
+    /* eje x y eje vertical y blur o defuminado */
+    color: #e73947;
+}
+div.contenedor{
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 14.9px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px grey;
+    /* el cuarto elemento es para incrementrar el tamaño de la sombra */
+    color: #477b9d;
+    border-radius: 14.9px;
+}
+div.cabecero{
+    background-color: #4cc9f0;
+}
+div.cuerpo{
+    padding-top: 2px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(177, 177, 177);
+    border: 1px solid green;
+}

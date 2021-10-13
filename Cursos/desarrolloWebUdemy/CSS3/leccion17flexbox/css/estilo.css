@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e73047;
+}
+div.contenedor{
+    display: flex;
+    background-color: #770bad;
+    /* flex-direction: column/column-reverse; */
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* para que se acomoden segun se necesiten */
+    flex-flow: row wrap;
+    /* justify-content: flex-start por default a la izquiera; */
+    justify-content: center;
+    /* justify-content: space-between para que se distribuyan; */
+    /* justify-content: space-around lo mismo pero con espacio de los dos lados pero distintos; */
+    justify-content: space-evenly ;
+    /* para que queden el mismo espacio de los dos lados */
+    height: 300px;
+    align-items: flex-start;
+    align-items: center;
+    /* strhench por default */
+    /* align-content: flex-start; */
+    /* para acomodarlos de manera vertical  */
+    /* align-items: center; */
+
+
+
+}
+div.contenedor > p{
+    background-color: #489e7f;
+    color: #f1faee;
+    margin: 20px;
+    padding: 14.9px;
+    font-size: 1.49em;
+
+}
