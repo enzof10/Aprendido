@@ -41,3 +41,49 @@ i = 10, y = 20;
 let z = i + y;
 console.log(z);
 
+
+// operadores and y or
+// and && y or  ||
+
+// operador ternario 
+// se conoce como ternasrio porque tiene 3 partes
+// primero tenemos la expresion booleana y despues los resultados por v o f
+let resultado = (3 > 2)? "verdadero" : 12 ;
+
+console.log(resultado);
+
+let numero = 9;
+resultado = (numero % 2 == 0)? "Numero par" : "Numero impar";
+console.log(resultado);
+
+// conversion de str a numero
+
+let miNumero = "10";
+console.log(typeof miNumero);
+
+let edad = Number(miNumero);
+console.log(typeof edad);
+if(edad >= 18){
+    console.log("Puede votar");
+}
+else{
+    console.log("Muy joven para votar");
+}
+
+let resulll = (edad >= 18) ? "puede votar" : "Muy joven para votar"
+console.log(resulll);
+
+let edat = "18x"
+
+console.log(typeof edat);
+if ( isNaN(edat)){
+    console.log("No es un numero")
+}
+else{
+    if(edat >= 18){
+        console.log("Puede votar");
+    }
+    else{
+        console.log("Muy joven para votar");
+    }
+}
