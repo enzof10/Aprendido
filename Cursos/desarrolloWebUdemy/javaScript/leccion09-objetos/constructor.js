@@ -27,3 +27,41 @@ console.log(padre);
 console.log(padre.nombreCompleto());
 console.log(madre.nombreCompleto());
 
+// usar new no va a ser necesarios a veeces
+
+// var miObjeto = new Object();
+let miObjeto = {};//esta forma seria la mas comun
+
+let miCadena1 = new String("hola");//esta es la funcion constructor del tipo string
+let miCadena2 = "hola";
+
+let miNumero = new Number(1);
+let miNumero2 = 1;
+
+let miBoolean = new Boolean(false);
+let miBoolean2 = false;
+
+let miArreglo = new Array();
+let miArreglo2 = [];
+
+let mifunctionnn = new function(){};
+let mifunction3 = function(){};
+
+// si agregamos propiedades direcatamente desde un objeto como ej padre
+// esa propiedad solo la va a tener el objeto padre y no el resto
+
+padre.telefono = "1213131";
+console.log(padre.telefono);
+console.log(madre.telefono);
+
+// si queremos agregar una propiedad para todos los objetos que se estan creando sin hacerlos con el constructor
+// tenemos que usar prototype
+
+PPPersona.prototype.telefono = "178777843";//este seria un valor por default
+console.log(padre.telefono);
+console.log(madre.telefono);
+
+
+
+
+

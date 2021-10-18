@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros en medio</title>
+</head>
+<body>
+    <script>
+        let numero1 = parseInt(prompt("Ingrese un numero"));
+        let numero2 = parseInt(prompt("Ingrese otro numero"));
+        let resultado = (numero1-numero2 == 1|| numero1-numero2 == -1) ? true : false;
+        if(resultado){
+            document.write("no existen numeros intermedios");
+        }
+        else if(numero1 < numero2){
+            while(numero1<numero2){
+                if(numero1 % 2 == 0){
+                    document.write(numero1);
+            }
+            numero1 ++;
+            }
+        }else{
+            while(numero2<numero1-1){
+                document.write(numero2);
+                numero2 ++;
+            }
+            }
+    </script>
+</body>
+</html>

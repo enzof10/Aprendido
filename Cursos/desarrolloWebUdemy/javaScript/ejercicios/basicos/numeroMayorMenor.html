@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function mayorMenor(numero1, numero2){
+    if (numero1 == numero2){
+        document.write("son iguales");
+        document.write(typeof numero1);
+
+    }
+    else if(numero1 < numero2){
+        document.write("El numero 1 es mayor");
+        document.write(typeof numero1);
+    }
+    else{
+        document.write("El numero 2 es mayor");
+        document.write(typeof numero1);
+    }
+}
+let numero1;
+let numero2;
+numero1 = parseInt(prompt("Ingrese un numero1"));
+numero2 = parseInt(prompt("Ingrese un numero2"));
+while(numero1<=0 || numero2<=0){
+   numero1 = parseInt(prompt("Vuelva a ingresar el numero1"));
+   numero2 = parseInt(prompt("Vuelva a ingresar el numero2"));
+};
+
+mayorMenor(numero1 ,numero2);
+    </script>
+</body>
+</html>
