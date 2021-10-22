@@ -38,3 +38,6 @@ var miFuncionTexto = miFuncion.toString();
 console.log(miFuncionTexto);
 // las funciones pueden ser objetos con propiedades y metodos
 
+// sincrona significa una linea a la vez
+// asincrona lo contrario
+

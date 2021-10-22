@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dom 1 javaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con javaScript</h1>
+    <p id="parrafo">Saludosss</p>
+    <p id="parafo2">Otro parrafo</p>
+    <script>
+        // todos los elementos del dom son objetos de tipo HTML
+        // por lo tanto tienen atributos y metodos
+        let cabecero = document.getElementById("cabecero").innerHTML;//esto nos devuelve todo el elemento cabecero
+        let cabecero2 = document.getElementById("cabecero");//esto nos devuelve todo el elemento cabecero
+        // console.log("Valor cabecero: " + cabecero);
+        console.log(`valor cabecero: ${cabecero2.innerHTML}`)
+
+        let parrafo = document.getElementById("parrafo");
+        console.log(`Valor parrafo: " + ${parrafo.innerHTML}`);
+
+        // tambien podemos mofificar los valores de los objetos del dom
+        parrafo.innerHTML = "Nuevo valor del parrafo";
+        cabecero2.innerHTML = "Nuevo valor del cabecero";
+
+        
+
+        // console.log("Saludos desde javaScript");
+    </script>
+</body>
+</html>

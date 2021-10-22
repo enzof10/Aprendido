@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dom 1 javaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul">Ejemplo DOM con javaScript</h1>
+    <p class="azul" id="parrafo">Saludosss</p>
+    <p class="azul" id="parafo2">Otro parrafo</p>
+    <script>        
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`no, parrafos ${parrafos.length}`);
+        for(let i = 0; i<parrafos.length; i++){
+            console.log(`Ubicacion ${i} - ` + parrafos[i].innerHTML);
+        }
+        let azul = document.getElementsByClassName("azul");
+        for(let i = 0; i<azul.length; i++){
+            console.log(`Ubicacion desde clases ${i} - ` + azul[i].innerHTML);
+        }
+        
+        // metodo queryslector
+
+        let elementos = document.querySelectorAll("p.azul");
+        console.log(`Con queryselector: ${elementos.length}`);
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+"use strict"
+
 class DispositivosEntrada{
     constructor(tipoEntrada, marca){
         this._tipoEntrada = tipoEntrada;
