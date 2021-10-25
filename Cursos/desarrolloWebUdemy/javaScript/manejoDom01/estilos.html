@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de estilos con JavaScript</title>
+</head>
+<body>
+    <div>
+        <!-- NO ES UNA BUENA PRACTICA -->
+        <h1 onclick="cambiaTexto(this);">TItulo para eventos</h1>
+        <button>eventos</button>
+    </div>
+    <h1 id="titulo">Manejo de estilos con JavaScript</h1>
+    <button onclick="cambiarCss()">Cambiar estilos</button>
+    <br>
+    <script>
+        document.getElementById("titulo").style.color = "blue";
+        function cambiarCss(){
+            document.getElementById("titulo").style.color = "red";
+        }
+        function cambiaTexto(titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = 'Nuevo titulo evento';
+            console.log(titulo.innerHTML);
+            // devuelve distintos valores por consola
+        }
+    </script>
+</body>
+</html>

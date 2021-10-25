@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion de eventos a elementos con JavasScript</title>
+</head>
+<body onload="entrar()">
+    <h1 id="titulo">Asociacion de eventos a elementos con JavasScript onload/cookies/onchage</h1>
+    <br>
+    <div id="mostrar">mostrar</div>
+    <script>
+        function entrar(){
+            alert("Entrando a la pagina web");
+            let texto = "";
+            if(navigator.cookieEnabled){
+                texto = "Las cookies estan habilitadas"
+            }else{
+                texto = "Las cookies estan deshabilitadas"
+            }
+            document.getElementById("mostrar").innerHTML = texto;
+            // document.getElementById("mostrar").innerHTML = navigator.cookieEnabled;
+            // podriamos agregar info de las cookies o info que se haya almacenado como una
+            // bajoo el formato de llave valor
+        }
+    </script>
+</body>
+</html>

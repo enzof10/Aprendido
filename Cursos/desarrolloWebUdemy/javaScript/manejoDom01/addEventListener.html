@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de elemtos que activan eventos</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de addeventListener</h1>
+    <br><br>
+    <label for="nombre">Noombre: </label>
+    <input type="text" name="nombre" id="nombre">
+    <label for="apellido">Apellido: </label>
+    <input type="text" name="apellido" id="apellido">
+    <script>
+        nombre = document.getElementById("nombre").addEventListener("focus", (evento) => evento.target.style.background = "pink");
+        nombre = document.getElementById("nombre").addEventListener("blur", (evento) => evento.target.style.background = "violet" );
+      
+
+        
+        apellido = document.getElementById("apellido").addEventListener("focus", cambiar);
+        apellido = document.getElementById("apellido").addEventListener("blur", regresar);
+
+        function cambiar(envento){
+            console.log(envento);
+           let componente = envento.target;
+
+           componente.style.background = "yellow"
+        }
+
+         function regresar(evento){
+             let componente = evento.target;
+             componente.style.background = "green"
+         }
+    </script>
+</body>
+</html>

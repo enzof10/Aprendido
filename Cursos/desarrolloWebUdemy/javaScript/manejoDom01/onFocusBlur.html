@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion de eventos a elementos con JavasScript</title>
+</head>
+<body >
+    <h1>Asociacion de eventos a elementos con JavasScript onload/cookies/onchage</h1>
+    <br>
+    <div id="dis"></div>
+    nombre: <input type="text" id="nombre">
+    <br/>
+    apellido: <input type="text" id="nombre">
+    <script>
+        Input = document.getElementById("nombre");
+        Input.onfocus = cambiar;
+        Input.onblur = regresar;
+
+        function regresar(){
+            Input.style.background = "blue"
+        }
+
+        function cambiar(){
+            Input.style.background = "red"
+        }
+    </script>
+</body>
+</html>

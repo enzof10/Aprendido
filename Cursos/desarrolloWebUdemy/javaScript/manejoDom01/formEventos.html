@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido">
+    </form>
+    <script>
+        const formulario = document.getElementById("formulario");
+        // sin true no se aplicaria  todos
+        // usecapture o delegacion
+        formulario.addEventListener("focus", (evento) => {evento.target.style.background = "pink"}, true);
+        formulario.addEventListener("blur", (evento) => {evento.target.style.background = "violet" }, true);
+      
+    </script>
+</body>
+</html>

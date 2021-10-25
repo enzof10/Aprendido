@@ -15,6 +15,7 @@
     </form>
     <button onclick="mostrarValores()">Mostrar</button>
     <div id="valores"></div>
+    <div id="valores2"></div>
     <script>
         function mostrarValores(){
             let formulario = document.forms["formulario"];
@@ -22,17 +23,20 @@
             // formulario es un array con los objetos del dom
 
             // accede a todo el objeto input
-            let nombre = formulario["nombre"];
+            let nombre = formulario["0"];
             let apellido = formulario["apellido"]
-
+            text = nombre.value + `<br>` + apellido.value//asi recuperamos el valor de juan
             for(let elemento of formulario){
                 // se pone value porque son formularios y asi se accede
+                texto += elemento.name + `<br>`;
                 texto += elemento.value + `<br>`;
             }
 
             // console.log(texto)
             // accedemos al div con classs valores y asignamos el texto
-            document.getElementById("valores").innerHTML = texto;
+            document.getElementById("valores").innerHTML = `Elementos: <br> ${texto} <br> nombre sin value: ${nombre} <br> apellido sin value:${apellido}`;
+            "<br/>"
+            document.getElementById("valores2").innerHTML = `Valores con value por separados: <br/> ${text}`;
         }
     </script>
 </body>

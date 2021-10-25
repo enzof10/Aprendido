@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion de eventos a elementos con JavasScript</title>
+</head>
+<body>
+    <h1 id="titulo">Asociacion de eventos a elementos con JavasScript</h1>
+    <br>
+    <div id="mostrar"></div>
+    <script>
+        document.getElementById("titulo").onclick = cambiarTexto;
+        document.getElementById("mostrar").onclick = cambiarTexto;
+
+        function cambiarTexto(){
+            document.getElementById("titulo").innerHTML = "Nuevo titulo con onclick desde JS"
+            document.getElementById("mostrar").innerHTML = "Nuevo contenido con onclick desde JS"
+        }
+    </script>
+</body>
+</html>

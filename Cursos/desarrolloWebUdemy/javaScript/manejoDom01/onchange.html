@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociacion de eventos a elementos con JavasScript</title>
+</head>
+<body >
+    <h1>Asociacion de eventos a elementos con JavasScript onload/cookies/onchage</h1>
+    <br>
+    <h2 id="cambiaColor">Si te paras aca se pone reddd</h2>
+    <div id="dis"></div>
+    nombre: <input type="text" id="nombre">
+    <script>
+        document.getElementById("nombre").onchange =  convertir;
+        titulo2 = document.getElementById("cambiaColor");
+        titulo2.onmousedown = cambiaAzul;
+        titulo2.onmouseup = cambiaARojo;
+        titulo2.onclick = cambiaAverde;
+        function cambiaAverde(){
+        titulo2.style.color = "green";
+        console.log("Verde")
+
+        }
+
+        function cambiaAzul(){
+            titulo2.style.color = "blue";
+        console.log("azul")
+
+        }
+
+        function cambiaARojo(){
+            titulo2.style.color = "red";
+        console.log("rojo")
+
+
+        }
+        function convertir(){
+            document.getElementById("dis").innerHTML = "Entro" ;
+            nombr = document.getElementById("nombre");
+            nombr.value = nombr.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
