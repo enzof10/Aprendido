@@ -121,3 +121,25 @@ const eliminarEgreso = (id)=>{
     cargarIngresos();
     cargarEgresos();
 }
+
+const agregarRegistro = () =>{
+    let forma = document.getElementById("forma");
+    let tipo = forma["tipo"];
+    let descripcion = forma["descripcion"];
+    let valor = forma["valor"];
+    console.log(forma, tipo, descripcion, valor);
+
+    if(descripcion.value !== "" && valor.value !== ""){
+        if(tipo.value === "ingreso"){
+            ingresos.push(new Ingreso(descripcion.value, +valor.value));
+            cargarCabecero();
+            cargarIngresos();
+        }
+        else if(tipo.value === "egreso"){
+            console.log("entro egreso")
+            egresos.push(new Egreso(descripcion.value, +valor.value));
+            cargarCabecero();
+            cargarEgresos();
+        }
+    }
+}

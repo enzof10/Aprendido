@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: grey;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frases{
+    text-align: center;
+}
+.imagen{
+    max-width: 600px;
+    border: 1px solid black;
+    margin-top: 0px;
+    word-wrap: break-word;
+}
+.meme{
+    border: 1px solid black;
+    position: relative;
+    word-wrap: break-word;
+}
+span{
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 1px black;
+    font-family:Georgia, 'Times New Roman', Times;
+}
+.contenedor-arriba{
+    position: absolute;
+    width: 98%;
+    top: 4em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contenedor-abajo{
+    width: 98%;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
