@@ -10,9 +10,11 @@ import Propiedades from "./componentes/Propiedades";
 import Estado from "./componentes/Estado";
 import RenerizadoCondicional from "./componentes/RenderizadoCondicional";
 import RenderizadoElementos from "./componentes/RenderizadoElementos";
-import Eventos from "./componentes/Eventos";
-
-
+// como no exportamos de manera por default hay que desestructurar
+import {EventosESSeis, EventosES7, MasSobreEventos} from "./componentes/EventosESSeis";
+import Padre from "./componentes/ComunicacionEntreComponentes";
+import CicloVida from "./componentes/CicloVida";
+import AjaxApi from './componentes/AjaxApis';
 function App() {
 
   // const userName = "Enzo frias";
@@ -25,7 +27,6 @@ function App() {
   }
   const saludarFn = (name) =>{
     console.log("holaaa" + name)
-    
   }
   // el primero es el valor del estado y el segundo la funcion que se ocupa de actualizar ese estado
   const [carState, setCarState] = useState(false);
@@ -65,7 +66,17 @@ function App() {
      <hr/>
      <RenderizadoElementos/>
      <hr/>
-     <Eventos/>
+     <EventosESSeis/>
+     <hr/>
+     <EventosES7/>
+     <hr/>
+     <MasSobreEventos/>
+     <hr/>
+     <Padre/>
+     <hr/>
+     <CicloVida/>
+     <hr/>
+     <AjaxApi/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
