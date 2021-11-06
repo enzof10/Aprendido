@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import { Button } from 'react-bootstrap';
 import './App.css';
-// import HolaMundo from "./componentes/holamundo"
-import Saludar from './componentes/Saludar';
-import Boton from './componentes/Boton';
+// import HolaMundo from "./componentesDeClase/holamundo"
+import Saludar from './componentesDeClase/Saludar';
+import Boton from './componentesDeClase/Boton';
 import React, {useState, useEffect} from "react";
-import Componente from "./componentes/Componente";
-import Propiedades from "./componentes/Propiedades";
-import Estado from "./componentes/Estado";
-import RenerizadoCondicional from "./componentes/RenderizadoCondicional";
-import RenderizadoElementos from "./componentes/RenderizadoElementos";
+import Componente from "./componentesDeClase/Componente";
+import Propiedades from "./componentesDeClase/Propiedades";
+import Estado from "./componentesDeClase/Estado";
+import RenerizadoCondicional from "./componentesDeClase/RenderizadoCondicional";
+import RenderizadoElementos from "./componentesDeClase/RenderizadoElementos";
 // como no exportamos de manera por default hay que desestructurar
-import {EventosESSeis, EventosES7, MasSobreEventos} from "./componentes/EventosESSeis";
-import Padre from "./componentes/ComunicacionEntreComponentes";
-import CicloVida from "./componentes/CicloVida";
-import AjaxApi from './componentes/AjaxApis';
+import {EventosESSeis, EventosES7, MasSobreEventos} from "./componentesDeClase/EventosESSeis";
+import Padre from "./componentesDeClase/ComunicacionEntreComponentes";
+import CicloVida from "./componentesDeClase/CicloVida";
+import AjaxApi from './componentesDeClase/AjaxApis';
+import ContadorHooks from './componentesConHooks/ContadorHooks';
+import ScrollHooks from './componentesConHooks/ScrollHooks';
+
 function App() {
 
   // const userName = "Enzo frias";
   // const edad = 27;
-  
   const user ={
     nombre : "Enzo Frias Borda",
     edad : 27,
@@ -77,6 +79,11 @@ function App() {
      <CicloVida/>
      <hr/>
      <AjaxApi/>
+     <hr/>
+     <hr/>
+     <ContadorHooks titulo="seguidores"/>
+     <hr/>
+     <ScrollHooks/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

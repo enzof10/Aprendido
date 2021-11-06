@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 
+// se le llamaba componente tonto o de presentacion
 function Pokemon(props){
     return(
         <figure>
             <img src={props.avatar} alt={props.name}/>
             <figcaption>{props.name}</figcaption>
-
         </figure>
     )
 }
+
 
 export default class AjaxApi extends Component{
     state={
