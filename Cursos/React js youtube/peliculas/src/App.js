@@ -17,9 +17,15 @@ import CicloVida from "./componentesDeClase/CicloVida";
 import AjaxApi from './componentesDeClase/AjaxApis';
 import ContadorHooks from './componentesConHooks/ContadorHooks';
 import ScrollHooks from './componentesConHooks/ScrollHooks';
+import RelojHooks from './componentesConHooks/RelojHooks';
+import AjaxHooks from './componentesConHooks/AjaxHooks';
+import HooksPersonalizados from './componentesConHooks/HookPersonalizado';
 
 function App() {
 
+  const [ properties, setProperties] = useState(false);
+  const [handleApi, setHanldeApi] = useState(false);
+  const [handleScroll, setHanldeScroll] = useState(false);
   // const userName = "Enzo frias";
   // const edad = 27;
   const user ={
@@ -51,16 +57,21 @@ function App() {
 
   return (
     <div className="App">
-      <Propiedades 
-        cadena="esto es una cadena de texto"
-        numero={19}
-        booleano={true}
-        arreglo={[1, 2, 3]}
-        objeto={{nombre:"enzo", correo:"Enzo_17@hotmail.com"}}
-        elementoReact={<i>Esto es un elemento React </i>}
-        funcion={num=>num*num}
-        componenteReact= {<Componente msg="Soy un componente pasado como props"/>}
-      />
+        <div className="propiedades">
+            <h2 onClick={() => setProperties(!properties)} >Iniciar propiedades</h2>
+            {properties &&
+            <Propiedades 
+              cadena="esto es una cadena de texto"
+              numero={19}
+              booleano={true}
+              arreglo={[1, 2, 3]}
+              objeto={{nombre:"enzo", correo:"Enzo_17@hotmail.com"}}
+              elementoReact={<i>Esto es un elemento React </i>}
+              funcion={num=>num*num}
+              componenteReact= {<Componente msg="Soy un componente pasado como props"/>}
+            />
+          }
+       </div>
       <hr/>
       <Estado/>
       <hr/>
@@ -78,23 +89,34 @@ function App() {
      <hr/>
      <CicloVida/>
      <hr/>
-     <AjaxApi/>
+     <div className="pokeApi">
+         <h2 onClick={()=>setHanldeApi(!handleApi)}>Pokeapi.(click para renderizar o eliminar)</h2>
+            {handleApi && <AjaxApi/>}
+     </div>
      <hr/>
      <hr/>
      <ContadorHooks titulo="seguidores"/>
      <hr/>
-     <ScrollHooks/>
+     <div>
+        <h2 onClick={()=>setHanldeScroll(!handleScroll)}>Scroll Hoooks(click para renderizar o eliminar)</h2>
+            {handleScroll && <ScrollHooks/>}
+     </div>
+     <hr/>
+     <RelojHooks/>
+     <hr/>
+     <AjaxHooks/>
+     <hr/>
+     <HooksPersonalizados/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <div>
           <h1>React boostrap</h1>
           <hr/>
           <Button variant="primary">Primary</Button>
           <h2>El coche esta {carState ? "encendido": "Apagado"}</h2>
           <h4>clicks: {contar}</h4>
           <Button variant="primary" onClick={interruptor}>Encender/Apagar</Button>
-
-        </p>
+        </div>
         {/* <Saludar name="Paco algo"/>
         {/* para mandar informacion por props hay que mandar el nombre de la propiedad */}
         {/* <Saludar name="Enzo frias Borda"/> */}

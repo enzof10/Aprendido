@@ -6,7 +6,7 @@ export default function Boton(){
     }
     return(
         <div>
-            <buuton onClick={saludar}>Saludar</buuton>
+            <button onClick={saludar}>Saludar</button>
         </div>
     )
 }

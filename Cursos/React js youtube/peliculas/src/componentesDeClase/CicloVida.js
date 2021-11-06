@@ -4,7 +4,7 @@ import React,{Component} from "react";
 // 2 render Fase de actualizacion o redibujar
 // 3 component didUnmout que espera a que el componente este en el DOM
 // 4 componentDidUpdate que se ejecuta y sirve capturar estados previos a la renderizacion
-// Cinco component willnmout que se ejecuta cuando elemina una componente
+// Cinco component willnmout que se ejecuta cuando elemina un componente
 
 class Reloj extends Component{
     // le vamos a pasar la hora como una props
