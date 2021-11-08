@@ -20,6 +20,10 @@ import ScrollHooks from './componentesConHooks/ScrollHooks';
 import RelojHooks from './componentesConHooks/RelojHooks';
 import AjaxHooks from './componentesConHooks/AjaxHooks';
 import HooksPersonalizados from './componentesConHooks/HookPersonalizado';
+import Referencias from './componentesConHooks/Referencias';
+import Formularios from './componentesConHooks/Formularios';
+import Estilos from './componentesConHooks/Estilos';
+import ComponentesEstilizados from './componentesConHooks/ComponentesStilizados';
 
 function App() {
 
@@ -107,6 +111,14 @@ function App() {
      <AjaxHooks/>
      <hr/>
      <HooksPersonalizados/>
+     <hr/>
+     <Referencias/>
+     <hr/>
+     <Formularios/>
+     <hr/>
+     <Estilos/>
+     <hr/>
+     <ComponentesEstilizados/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>

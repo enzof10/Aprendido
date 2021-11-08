@@ -21,7 +21,7 @@ export const useFetch = (url)=>{
                 // throw era como el return de los errores
                 // es lo que va a caputar catch
             throw {
-                    errorTry:true,
+                    err:true,
                      status:res.status,
                       statusText: !res.statusText ? "Ocurrio un error": res.statusText,
                     };
@@ -30,12 +30,10 @@ export const useFetch = (url)=>{
 
          setisPending(false);
          setData(data);
-         setError({error:false})
-
-
-        } catch (errorTry) {
+         setError({err:false})
+        }catch(err) {
             setisPending(true);
-            setError({errorTry})
+            setError({err});
         }
         }
         getData(url);
