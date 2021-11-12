@@ -1,4 +1,5 @@
 import './App.css';
+import CrudApi from './componentes/CrudApi';
 import { CrudApp } from './componentes/CrudApp';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Ejercicios con REACT</h1>
+        <CrudApi/>
         <hr/>
         <CrudApp/>
       </header>

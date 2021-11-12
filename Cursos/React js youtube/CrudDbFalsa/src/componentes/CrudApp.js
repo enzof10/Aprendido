@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import CrudForm from './CrudForm';
 import CrudTable from './CrudTable';
 //  los datos los vamos a mandar a llamar de una base falsa porque va a ser un crud falso
-
+// la loggica en CrudApp, en form los eventos que reaccionan a los eventos de formulario, crud table contenedor para renderizar
 const initialDb =[
     {id:1,
     name:"Seiya",
@@ -52,25 +52,34 @@ export const CrudApp = () => {
 // recibbe el id de la fila, osea el objeto de donde se activa el evento 
     const deleteData=(id)=>{  
         console.log(id);
-        let newData = db.map(caballero=> caballero.id === id ? db.splice(id, 1) : caballero );
+        // windows confirm devuelve un boolean dependiendo de aceptar o cancelar
+        let isDelete = window.confirm("Esta seguguro de eliminar el registro")
+
+        if(isDelete){
+            // en vez de map usamos un filtrado
+        let newData = db.filter(caballero=> caballero.id !== id);
         setDb(newData);
+    }
      }
     return (
         <div>
             <h2>CRUD APP</h2>
-            {/* el formulario ya va a recibir 4 propiedades, 1 valor y 3 funciones */}
-            <CrudForm 
-            createData={createData} 
-            updateData={updateData} 
-            dataToEdit={dataToEdit}
-            setDataToEdit={setDataToEdit}
-            />
-            {/* la tabla ademas de los datos necesita la funcion que va a elminitar los datos 
-            para los botones */}
-            <CrudTable dbCrudApp={db} 
-            setDataToEdit={setDataToEdit} 
-            deleteData={deleteData} 
-            />
+            {/* en movil va a estar a una columna y en pc en dos */}
+            <article className="grid-1-2"> 
+                {/* el formulario ya va a recibir 4 propiedades, 1 valor y 3 funciones */}
+                <CrudForm 
+                createData={createData} 
+                updateData={updateData} 
+                dataToEdit={dataToEdit}
+                setDataToEdit={setDataToEdit}
+                />
+                {/* la tabla ademas de los datos necesita la funcion que va a elminitar los datos 
+                para los botones */}
+                <CrudTable dbCrudApp={db} 
+                setDataToEdit={setDataToEdit} 
+                deleteData={deleteData} 
+                />
+            </article> 
         </div>
     )
 }

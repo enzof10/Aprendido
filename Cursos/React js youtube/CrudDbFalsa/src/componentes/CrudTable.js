@@ -4,7 +4,7 @@ import CrudTableRow from './CrudTableRow'
 const CrudTable = ({ dbCrudApp, setDataToEdit, deleteData}) => {
     return (
         <div>
-            <h3>Tabla de datos{console.log(dbCrudApp)}</h3>
+            <h3>Tabla de datos</h3>
             <table>
                 <thead>
                     <tr>
@@ -20,6 +20,7 @@ const CrudTable = ({ dbCrudApp, setDataToEdit, deleteData}) => {
                     dbCrudApp.map(caballero=><CrudTableRow
                         key={caballero.id} 
                         caballero={caballero}
+                        // le pasamos la funciones setDataToEdit y deleData ya desestructuradas al hijo crud tableRow
                         setDataToEdit={setDataToEdit}
                         deleteData = {deleteData}
                         />)

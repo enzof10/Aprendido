@@ -8,7 +8,7 @@ const initialForm={
 }
 const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     useEffect(()=>{
-        console.log("DatoToediten useEffect",dataToEdit)
+        // console.log("DatoToediten useEffect",dataToEdit)
         // si data to edit tiene algo
         if(dataToEdit){
             setForm(dataToEdit);
@@ -63,7 +63,9 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
     return (
         <div>
-            <h3>Agrgegar</h3>
+            {/* si la variable dataToEdit trae algo  significa  significa que paso el objeto 
+            al evento padre mediante el evento onclick*/}
+            <h3>{dataToEdit ?"Editar" :"Agregar"}</h3>
             <form onSubmit={handlleSubmit}>
                 <input 
                 type="text" 
