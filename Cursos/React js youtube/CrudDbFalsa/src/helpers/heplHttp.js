@@ -38,13 +38,14 @@ export const helpHttp= () =>{
         // si options.body es falso lo elimino, osea si no existe
         // para que no maruqe error en la peticio fetch
         if(!options.body) delete options.body;
-        console.log("options abajo: ",options);
+        console.log("options en helpHttp: ",options);
 
         // controller es nuestro objeto abortController que nos permite abortar manualmente
         // nuestra peticion fetch,
         // si despues de 3 segundos no tenemos una respuesta lo aborte
         setTimeout(()=> controller.abort(),1000)
 
+        
         
         // nuestro customFetch va a retornar una promesa
         return fetch(endPoint, options)

@@ -11,9 +11,7 @@ const Message = ({msg, bgColor}) => {
     }
     return (
         <div style={styles}>
-            <h2>Esta Cargando</h2>
             <p>{msg}</p>
-
         </div>
     )
 }

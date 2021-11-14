@@ -16,11 +16,11 @@ export const CrudApi = () => {
     const [dataToEdit, setDataToEdit] = useState(null);
     // cuando este nullo insercionn, cuando true actualizacion data=caballero
     
-    // para simplificar el llamado de help
-    let api = helpHttp();
-    let url = "http://localhost:5000/santo";
     
-     useEffect(() => {
+    useEffect(() => {
+         // para simplificar el llamado de help
+         let api = helpHttp();
+         let url = "http://localhost:5000/santos";
          console.log("Entro al useEfect")
         //  cambio la variable de set loading para que se muestre mientras carga
          setLoading(true)
@@ -53,18 +53,57 @@ export const CrudApi = () => {
 
     // recibe el form de CrudForm
     const createData=(objetoFormDeCrudForm)=>{
-        console.log([])
-        console.log(objetoFormDeCrudForm)
+        let api = helpHttp();
+        let url = "http://localhost:5000/santos";
+        console.log("1-objeto en creade data crudapi: ", objetoFormDeCrudForm)
+       
+    //espero recibir el contenido en aplicacion/json, si no, no funciona
+    // algunas api soportan esto y otras no
+        let options= {
+            body:objetoFormDeCrudForm,
+             headers:{"content-type":"application/json"}
+            }
+        
+        console.log("3-options CrudApi: ",options)
         // le creamos un id para que no sea un update
         objetoFormDeCrudForm.id = Date.now();
         // trae la base de datos como la tengas con el spread operator y agregale objetoFormDeCrudForm
-        setDb([...db, objetoFormDeCrudForm])
+        api.post(url, options)
+        .then((res)=>{console.log("x-Despues que sale de helpHttp: ",res);
+        if(!res.err){
+            // actualiza lo que haya en la db mas lo que venga en la data
+            // pero ojo, con la respuesta que venga de la variable
+            setDb([...db, res]);
+        }else{
+            setError(res);
+
+        }
+    })
     }
 // estas fucniones las pasamos como atributos a los demas componentes
     const updateData=(objetoFormDeCrudForm)=>{
-        console.log("updateData: ",objetoFormDeCrudForm)
-        let newData = db.map(caballero=> caballero.id === objetoFormDeCrudForm.id? objetoFormDeCrudForm: caballero );
-        setDb(newData);
+        let api = helpHttp();
+        let url = "http://localhost:5000/santos";
+        let endpoint = ` ${url}/${objetoFormDeCrudForm.id}`;
+        let options= {
+            body:objetoFormDeCrudForm,
+             headers:{"content-type":"application/json"}
+            }
+        
+        api.put(endpoint, options)
+        .then((res)=>{console.log("x-Despues que sale de helpHttp: ",res);
+        if(!res.err){
+            let newData = db.map(caballero=> caballero.id === objetoFormDeCrudForm.id? objetoFormDeCrudForm: caballero );
+            setDb(newData);
+        }else{
+            setError(res);
+
+        }
+    })
+
+
+
+
     }
 // recibbe el id de la fila, osea el objeto de donde se activa el evento 
     const deleteData=(id)=>{  
