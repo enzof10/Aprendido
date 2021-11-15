@@ -15,16 +15,17 @@ const CrudTable = ({ dbCrudApp, setDataToEdit, deleteData}) => {
                 </thead>
                 <tbody>
                     {/* si no hay datos mando una fila de 3 columnas que diga no hay datos */}
-                    {dbCrudApp.length === 0?(<tr><td colSpan="3">Sin datos</td></tr>
-                    ):(
-                    dbCrudApp.map(caballero=><CrudTableRow
+                    {dbCrudApp.length > 0?
+                    (dbCrudApp.map(caballero=><CrudTableRow
                         key={caballero.id} 
                         caballero={caballero}
                         // le pasamos la funciones setDataToEdit y deleData ya desestructuradas al hijo crud tableRow
                         setDataToEdit={setDataToEdit}
                         deleteData = {deleteData}
-                        />)
-                    )}{/*si no le digo que haga un map y renderize todos los datos*/}
+                        />))
+                        :
+                    (<tr><td colSpan="3">Sin datos</td></tr>)}
+                        {/*si no le digo que haga un map y renderize todos los datos*/}
                 </tbody>
             </table>
         </div>

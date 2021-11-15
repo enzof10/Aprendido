@@ -29,7 +29,7 @@ export const CrudApi = () => {
                console.log("entro a resp", res)
             //cuando no un msj de error osea err del error
                if(!res.err){
-                   console.log("Entro a al if de resp")
+                   console.log("Entro a al if de resp en useEfect")
                    setDb(res)
                 //    modifico el estado error para que si hay un error se renderize la palabra error
                    setError(null)
@@ -107,15 +107,36 @@ export const CrudApi = () => {
     }
 // recibbe el id de la fila, osea el objeto de donde se activa el evento 
     const deleteData=(id)=>{  
-        console.log(id);
+        console.log("id en deleteData: ",id);
         // windows confirm devuelve un boolean dependiendo de aceptar o cancelar
-        let isDelete = window.confirm("Esta seguguro de eliminar el registro")
+        let isDelete = window.confirm(`Esta seguguro de eliminar el registro ${id}`)
 
+        // no necisitamos body porque pasamos el id, y accede a todo el objeto
         if(isDelete){
+            let api = helpHttp();
+            let url = "http://localhost:5000/santos";
+            let endpoint = ` ${url}/${id}`;
+            let options ={
+                headers:{"content-type": "application/json"},
+            }
             // en vez de map usamos un filtrado
-        let newData = db.filter(caballero=> caballero.id !== id);
-        setDb(newData);
-    }
+            api.del(endpoint, options)
+            .then((respuesta) =>{
+                if(!respuesta.err){
+                    console.log("Respuesta en delete ",respuesta)
+                    console.log("db en delete ",db)
+                    let newData = db.filter((el)=> el.id !== id);
+                    setDb(newData);
+                    alert("Entro a if")
+                }else{
+                    setError(respuesta);
+                    alert("Entro a else ")
+                }
+            })
+   
+        }else{
+            return;
+        }
      }
     return (
         <div>

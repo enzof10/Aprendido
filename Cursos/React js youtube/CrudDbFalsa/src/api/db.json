@@ -1,42 +1,42 @@
- {
-   "santos": [
-            {"id":1,
-            "name":"Seiya",
-            "constellation":"Pegaso"
-            },
-            {"id":2,
-            "name":"Shiryu",
-            "constellation":"Dragon"
-            },
-            {"id":3,
-            "name":"Hyoga",
-            "constellation":"Cisne"
-            },
-            {"id":4,
-            "name":"Shun",
-            "constellation":"Andromeda"
-            },
-            {"id":5,
-            "name":"Ikki",
-            "constellation":"Fenix"
-            }
-         ],
-    "otros":{
-        "id":1,
-        "name":"gegeg",
-        "constellation":[
-                    {
-                        "id":1,
-                        "narnia":"naranja"
-                        },
-                        {
-                        "id":2,
-                        "narnia":"naranja"
-                        },
-                        {
-                        "id":3,
-                        "narnia":"naranja"
-                        }
-                    ]
+{
+  "santos": [
+    {
+      "id": 1,
+      "name": "Seiya",
+      "constellation": "Pegaso"
+    },
+    {
+      "id": 2,
+      "name": "Shiryu",
+      "constellation": "Dragon"
+    },
+    {
+      "id": 3,
+      "name": "Hyoga",
+      "constellation": "Cisne"
+    },
+    {
+      "id": 4,
+      "name": "Shun",
+      "constellation": "Andromeda"
     }
+  ],
+  "otros": {
+    "id": 1,
+    "name": "gegeg",
+    "constellation": [
+      {
+        "id": 1,
+        "narnia": "naranja"
+      },
+      {
+        "id": 2,
+        "narnia": "naranja"
+      },
+      {
+        "id": 3,
+        "narnia": "naranja"
+      }
+    ]
+  }
 }

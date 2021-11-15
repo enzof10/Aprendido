@@ -43,7 +43,7 @@ export const helpHttp= () =>{
         // controller es nuestro objeto abortController que nos permite abortar manualmente
         // nuestra peticion fetch,
         // si despues de 3 segundos no tenemos una respuesta lo aborte
-        setTimeout(()=> controller.abort(),1000)
+        setTimeout(()=> controller.abort(),2000)
 
         
         
@@ -75,13 +75,13 @@ export const helpHttp= () =>{
 
     const put =(url, options = {})=>{
         // como es un metodo post le agrego al objeto que la propiedad methos sea igual a post
-        options.method = "POST"
+        options.method = "PUT"
         return customFetch(url, options)
     }
 
     const del =(url, options = {})=>{
         // como es un metodo post le agrego al objeto que la propiedad methos sea igual a post
-        options.method = "POST"
+        options.method = "DELETE"
         return customFetch(url, options)
     }
     
