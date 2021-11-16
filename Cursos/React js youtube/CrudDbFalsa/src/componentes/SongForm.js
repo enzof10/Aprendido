@@ -5,6 +5,7 @@ const initialForm={
     song:"",
 }
 const SongForm = ({handleSearch}) => {
+
     const [form, setForm] = useState(initialForm);
 
     const handleChange=(e)=>{
@@ -37,12 +38,14 @@ const SongForm = ({handleSearch}) => {
                 name="artist" 
                 placeholder="Nombre del interprete" 
                 onChange={handleChange}
+                value={form.artist}
                 />
                 <input 
                 type="text" 
                 name="song"
                 placeholder="Nombre la cancion" 
                 onChange={handleChange}
+                value={form.song}
                  />
                {/* lo ideal es tener los formularios controlados a partir de una vsaribale de estado */}
                 <input type="submit" value="Enviar"/>
