@@ -1,4 +1,5 @@
 import './App.css';
+import ContactForm from './componentes/ContactForm';
 import CrudApi from './componentes/CrudApi';
 import { CrudApp } from './componentes/CrudApp';
 import SelectsAnidados from './componentes/SelectsAnidados';
@@ -9,6 +10,8 @@ return (
     <div className="App">
       <header className="App-header">
         <h1>Ejercicios con REACT</h1>
+        <ContactForm/>
+        <hr/>
         <SelectsAnidados/>
         <hr/>
         <SongSearch/>

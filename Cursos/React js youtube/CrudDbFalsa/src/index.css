@@ -9,7 +9,9 @@ html{
   box-sizing: inherit;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+textarea {
   border: thin solid #dedede;
   border-radius: 0.249rem;
   padding: .749rem;
@@ -21,6 +23,12 @@ input[type="text"] {
   line-height: 1;
   background-color: transparent;
 }
+
+textarea{
+  font-family: inherit;
+  resize: none;
+}
+
 
 button,
 input[type="submit"],
