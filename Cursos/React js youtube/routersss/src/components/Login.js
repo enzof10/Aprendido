@@ -1,7 +1,13 @@
-const Login = () => {
+import { Navigate } from "react-router";
+import Dashboard from "./Dashboard";
+
+const Login = ({children}) => {
+    let auth = false;
+
+    console.log(children)
     return (
         <div>
-            <h3>Login</h3>
+           {auth ? <Dashboard/> : <Navigate  />}
         </div>
     )
 }

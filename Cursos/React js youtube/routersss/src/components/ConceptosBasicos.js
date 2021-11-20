@@ -11,6 +11,7 @@ import Error404 from "./Error404"
 import Inicio from "./Inicio"
 import Login from "./Login"
 import MenuConceptos from "./MenuConceptos"
+import PrivateRoute from "./PrivateRoute"
 import Productos from "./Productos"
 import ReactTopics from "./ReactTopics"
 import Usuario from "./Usuario"
@@ -31,13 +32,18 @@ const ConceptosBasicos = () => {
                     <Route path="/usuario/:username" element={<Usuario/>} />
                     <Route path="/productos" element={<Productos/>} />
                     <Route path="/about" element={algo ? (<><Navigate to="/acerca"/></>) : (<Error404/>)}>
-                        {/* <h3>About</h3> */}
                     </Route>
                     <Route path="/contact" element={<><Navigate to="/acerca"/></>} >
-                        {/* <h3>Contact</h3> */}
                     </Route>
                     <Route path="react/*" element={<ReactTopics/>} />
-                    <Route path="/login" element={<Login/>} />
+                    <Route path="login/*" element={ 
+                        <Login>
+                            <Dashboard></Dashboard>
+                        </Login>
+                    } >
+
+                    </Route>
+                    {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
                     <Route path="/dashboard" element={<Dashboard/>} />
                 </Routes>
             </BrowserRouter>
