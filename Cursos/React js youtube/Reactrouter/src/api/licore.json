@@ -1,0 +1,103 @@
+{
+    
+        "bebida" : [
+            {
+                "nombre": "fernet",
+                "marca": [
+                    {
+                        "marca" : "branca"
+                    },
+                    {
+                        "marca" : "vitone"
+                    },
+                    {
+                        "marca" : "1882"
+                    },
+                    {
+                        "marca" : "capri"
+                    }
+                ]
+            },
+            {
+                "nombre" : "cerveza",
+                "marca" : [
+                    {
+                        "marca" : "brahama"
+                    },
+                    {
+                        "marca" : "quilmes"
+                    },
+                    {
+                        "marca": "heineken"
+                    },
+                    {
+                        "marca" : "andes"
+                    },
+                    {
+                        "marca" : "salta"
+                    },
+                    {
+                        "marca" : "mono sabio"
+                    }
+                ]
+            },
+            {
+                "nombre" : "vodka",
+                "marca" : [
+                    {
+                        "marca" : "new style"
+                    },
+                    {
+                        "marca" : "absolut"
+                    },
+                    {
+                        "marca" : "smirnoff"
+                    },
+                    {
+                        "marca" : "dale Vodkita"
+                    }
+                ]
+            },
+            {
+                "nombre" : "tequila",
+                "marca" : [
+                    {
+                        "marca": "tequilita"
+                    },
+                    {
+                        "marca" : "chupa del chupito"
+                    },
+                    {
+                        "marca" : "tequilon"
+                    },
+                    {
+                        "marca": "tenquiu"
+                    },
+                    {
+                        "marca" : "amimeencanta"
+                    }
+                ]
+            },
+            {
+                "nombre" : "ron",
+                "marca" : [
+                    {
+                        "marca": "ron wisly"
+                    },
+                    {
+                        "marca" : "RONaldo"
+                    },
+                    {
+                        "marca" : "RONney"
+                    },
+                    {
+                        "marca": "new style"
+                    }
+                ]  
+            }
+        ],    
+        "stock":[
+            {"precio":10}
+        ]
+    
+}
