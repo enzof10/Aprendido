@@ -4,6 +4,11 @@ import CrudTable from './CrudTable';
 import {helpHttp} from "../helpers/heplHttp"
 import Loaders from './Loaders';
 import Message from './Message';
+import { HashRouter, 
+    NavLink, 
+    Route, 
+    Routes } from 'react-router-dom';
+import Error404 from './Error404';
 
 
 export const CrudApi = () => {
@@ -140,27 +145,58 @@ export const CrudApi = () => {
      }
     return (
         <div>
-            <h2>CRUD API</h2>
-            {/* en movil va a estar a una columna y en pc en dos */}
-            <article className="grid-1-2"> 
+            <HashRouter basename="/santos">
+                <header>
+                    <h2>Crud api con rutas</h2>
+                    <nav>
+                        <NavLink to="/home" 
+                        style={isActive => 
+                        ({color: isActive ?
+                         "green" : "blue"})}
+                         >Santos</NavLink>
+                         <NavLink to="/agregar" 
+                        style={isActive => 
+                        ({color: isActive ?
+                         "green" : "blue"})}
+                         >Agregar</NavLink>
+                    </nav>
+                </header>
+                <Routes>
+                    <Route path="/home" element={
+                    <article className="grid-1-2"> 
                 {/* el formulario ya va a recibir 4 propiedades, 1 valor y 3 funciones */}
-                <CrudForm 
-                createData={createData} 
-                updateData={updateData} 
-                dataToEdit={dataToEdit}
-                setDataToEdit={setDataToEdit}
-                />
+               
                 {/* renderizado condicional de loading, solo cuando sea verdadera */}
                 {loading && <Loaders/>}
-                {error && <Message msg={`Error ${error.status}: ${error.statusText}`} bgColor="#dc3747"/>}
+                {error && (<Message msg={`Error ${error.status}: ${error.statusText}`} bgColor="#dc3747"/>)}
                 {/* la tabla ademas de los datos necesita la funcion que va a elminitar los datos 
                 para los botones */}
                 {/* si el valor de la base de datos es nullo no se renderiza */}
-               {db && <CrudTable dbCrudApp={db} 
+               {db && (<CrudTable dbCrudApp={db} 
                 setDataToEdit={setDataToEdit} 
                 deleteData={deleteData} 
-                />}
-            </article> 
+                />)}
+            </article> }/>
+                    <Route path="/agregar" element={ 
+                        <CrudForm 
+                            createData={createData} 
+                            updateData={updateData} 
+                            dataToEdit={dataToEdit}
+                            setDataToEdit={setDataToEdit}
+                            />}/>
+                    <Route path="/editar/:id" element={ 
+                        <CrudForm 
+                            createData={createData} 
+                            updateData={updateData} 
+                            dataToEdit={dataToEdit}
+                            setDataToEdit={setDataToEdit}
+                            />}/>
+                    <Route path="*" element={<Error404/>}/>
+                </Routes>
+            </HashRouter>
+            <h2>CRUD API</h2>
+            {/* en movil va a estar a una columna y en pc en dos */}
+            
         </div>
     )
 }

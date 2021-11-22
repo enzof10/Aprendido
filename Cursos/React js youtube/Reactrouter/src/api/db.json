@@ -13,7 +13,7 @@
     {
       "id": 3,
       "name": "Hyoga",
-      "constellation": "Cisne"
+      "constellation": "Cisnes"
     },
     {
       "id": 4,
@@ -24,6 +24,31 @@
       "name": "enzo",
       "constellation": "tauro",
       "id": 1637461758640
+    },
+    {
+      "name": "saga",
+      "constellation": "Geminis",
+      "id": 1637591204604
+    },
+    {
+      "name": "mu",
+      "constellation": "aries",
+      "id": 1637591930765
+    },
+    {
+      "name": "afrodita",
+      "constellation": "picis",
+      "id": 1637591981663
+    },
+    {
+      "name": "otro",
+      "constellation": "algo",
+      "id": 1637592240911
+    },
+    {
+      "name": "milo",
+      "constellation": "escorpion",
+      "id": 1637592765624
     }
   ],
   "otros": {

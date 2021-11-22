@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import { useNavigate } from 'react-router';
 
 // inicio la estructura del objeto formulario por buena practica
 const initialForm={
@@ -7,6 +8,10 @@ const initialForm={
     id:null,
 }
 const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
+
+    let navigate = useNavigate()
+    
+    const [form, setForm] = useState(initialForm);
     useEffect(()=>{
         // console.log("DatoToediten useEffect",dataToEdit)
         // si data to edit tiene algo
@@ -17,8 +22,6 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
         }
         // cuando data to edit caambia se activa
     },[dataToEdit]);
-
-    const [form, setForm] = useState(initialForm);
     
 
 
@@ -59,6 +62,7 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
         // tambien editamos el data a null como en el componente padre donde se creo
         // para controlar 
         setDataToEdit(null);
+        navigate("/home")
         }
 
     return (
