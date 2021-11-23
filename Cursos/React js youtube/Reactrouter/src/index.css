@@ -39,6 +39,7 @@ textarea{
 
 button,
 input[type="submit"],
+input[type="button"],
 input[type="reset"]{
   border: thin solid #444;
   border-radius: 00.249rem;
@@ -56,7 +57,12 @@ input[type="reset"]{
   vertical-align: middle;
   cursor: pointer;
 }
-
+input[type="button"]:disabled{
+  border-color: rgb(118, 118, 118, 0.3);
+  color: rgba(17, 17, 17, 0.3);
+  background-color: rgba(239 , 239, 239, 0.3);
+  cursor: default;
+}
 img{
   max-width: 100%;
   height: auto;

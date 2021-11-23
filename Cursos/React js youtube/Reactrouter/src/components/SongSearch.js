@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import SongDetails from './SongDetails';
+import SongPages from "../pages/SongPages"
 import SongForm from './SongForm';
 import Loaders from './Loaders';
+import Error404 from "./Error404"
 import { helpHttp } from '../helpers/heplHttp';
+import { 
+    HashRouter, 
+    Link, 
+    Routes, 
+    Route } from 'react-router-dom';
+import SongTable from './SongTable';
+
+    let mySongInit = JSON.parse(localStorage.getItem("mySongs")) || []
 
 // necesitamos una vaaribale de estado que guade la busqueda
 // y ademas una variable de estad que guarde la informacion del artista
@@ -13,7 +23,7 @@ const SongSearch = () => {
     const [lyric, setLyric] = useState(null);
     const [bio, setBio] = useState(null);
     const [loading, setLoading] = useState(false);
-
+    const [mySongs, setMySongs] = useState(mySongInit)
 
     // para hacer peticiones asincronas hay que trabajarlas en un efecto 
     useEffect(() => {
@@ -45,7 +55,29 @@ const SongSearch = () => {
         }
 
         fetchData();
-    }, [search])
+        localStorage.setItem("mySongs", JSON.stringify(mySongs))
+    }, [search, mySongs])
+
+    const handleSaveSong=()=>{
+        alert("Salvando cancion en favoritos");
+        let currentSong={
+            search,
+            lyric,
+            bio
+        }
+        setMySongs((mySongs)=>[...mySongs, currentSong]);
+        setSearch(null);
+
+    }
+    const handleDeleteSong=(id)=>{
+        // alert(`Eliminando cancion con id ${id}`)
+        let isDelete = window.confirm("Estas seguro de eliminar la cancion");
+        if (isDelete){
+            let songs = mySongs.filter((cancion, index)=> index !== id)
+            setMySongs(songs);
+            localStorage.setItem("mySongs", JSON.stringify(songs))
+        }
+    }
 
     const handleSearch= (data)=>{
         console.log("Data en handle search: ",data);
@@ -54,20 +86,46 @@ const SongSearch = () => {
 
     return (
         <div>
-            <article className="grid-1-3">
-            <h2>Song Search</h2>
+           
+            <HashRouter basename="/">
+                <header>
+                    <h2>Song Search</h2>
+                    <Link to="/">Inicio</Link>
+                    <Link to="/buscador">Buscador</Link>
+                </header>
             {loading && <Loaders/>}
-            <SongForm
-            handleSearch={handleSearch}
-            />
-            {search && !loading && 
-            (<SongDetails
-            search={search}
-            lyric={lyric}
-            bio={bio}
-            />
-            )}
+            <article className="grid-1-2">
+                <Routes>
+                    <Route path="/buscador"  
+                    element={
+                        <article className="grid-1-2">
+                        <SongForm
+                        handleSearch={handleSearch}
+                        handleSaveSong={handleSaveSong}
+                        /> 
+                        <SongTable
+                        mySongs={mySongs}
+                        handleDeleteSong={handleDeleteSong}/>
+                        {search && !loading && 
+                        (<SongDetails
+                        search={search}
+                        lyric={lyric}
+                        bio={bio}
+
+                        />
+                        )}
+                        </article>}
+                    />
+                    <Route path="/canciones/:id" 
+                    element={
+                    <SongPages
+                    mySongs={mySongs}/>}/>
+                    <Route path="/" element={<h2>Inicio</h2>} />
+                    <Route path="*" element={<Error404/>} />
+                </Routes>
             </article>
+
+            </HashRouter>
         </div>
     )
 }
