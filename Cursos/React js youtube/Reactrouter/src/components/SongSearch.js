@@ -65,8 +65,11 @@ const SongSearch = () => {
             lyric,
             bio
         }
-        setMySongs((mySongs)=>[...mySongs, currentSong]);
+        let songs=[...mySongs, currentSong]
+        setMySongs(songs);
         setSearch(null);
+        localStorage.setItem("mySongs", JSON.stringify(songs))
+
 
     }
     const handleDeleteSong=(id)=>{
@@ -90,8 +93,8 @@ const SongSearch = () => {
             <HashRouter basename="/">
                 <header>
                     <h2>Song Search</h2>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/buscador">Buscador</Link>
+                    <Link to="/">Mis Canciones</Link>
+                    <Link to="/buscador">Buscar</Link>
                 </header>
             {loading && <Loaders/>}
             <article className="grid-1-2">
@@ -103,7 +106,17 @@ const SongSearch = () => {
                         handleSearch={handleSearch}
                         handleSaveSong={handleSaveSong}
                         /> 
-                        <SongTable
+                       
+                        
+                        </article>}
+                    />
+                    <Route path="/canciones/:id" 
+                    element={
+                    <SongPages
+                    mySongs={mySongs}/>}/>
+                    <Route path="/" element={
+                    <article className="grid-1-2">
+                         <SongTable
                         mySongs={mySongs}
                         handleDeleteSong={handleDeleteSong}/>
                         {search && !loading && 
@@ -112,15 +125,9 @@ const SongSearch = () => {
                         lyric={lyric}
                         bio={bio}
 
-                        />
-                        )}
-                        </article>}
-                    />
-                    <Route path="/canciones/:id" 
-                    element={
-                    <SongPages
-                    mySongs={mySongs}/>}/>
-                    <Route path="/" element={<h2>Inicio</h2>} />
+                        />)}
+                    </article>
+                    } />
                     <Route path="*" element={<Error404/>} />
                 </Routes>
             </article>

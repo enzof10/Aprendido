@@ -145,7 +145,7 @@ export const CrudApi = () => {
      }
     return (
         <div>
-            <HashRouter basename="/santos">
+            <HashRouter basename="/">
                 <header>
                     <h2>Crud api con rutas</h2>
                     <nav>
@@ -177,6 +177,7 @@ export const CrudApi = () => {
                 deleteData={deleteData} 
                 />)}
             </article> }/>
+            <Route path="/" element={<h2>Santos inicio</h2>}/>
                     <Route path="/agregar" element={ 
                         <CrudForm 
                             createData={createData} 
