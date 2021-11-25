@@ -1,13 +1,19 @@
 import './App.css';
+import CrudApi from './components/CrudApi';
 import MyPage from './components/MyPage';
 import MyPageContext from './components/MyPageContext';
+import { CrudProvider } from './context/CrudContext';
 
 function App() {
   return (
     <div className="App">
-      <MyPageContext/>
-      <hr/>
-      <MyPage/>
+      <CrudProvider>
+        <CrudApi/>
+        <hr/>
+        <MyPageContext/>
+        <hr/>
+        <MyPage/>
+      </CrudProvider>
     </div>
   );
 }

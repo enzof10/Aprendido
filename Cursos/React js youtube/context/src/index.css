@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.my-page{
+.my-page, table{
   margin: 2rem auto;
   padding: 1rem;
   width: 70%;

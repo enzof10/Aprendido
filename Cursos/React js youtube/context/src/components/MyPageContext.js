@@ -6,7 +6,6 @@ import HeaderContext from "./HeaderContext"
 import MainContext from "./MainContext";
 
 
-
 const MyPageContext = () => {
 
     

@@ -6,7 +6,7 @@ import ThemeContext from "../context/ThemeContext"
 const MainContext = () => {
     const {theme} = useContext(ThemeContext);
     const {texts} = useContext(LanguageContext);
-    const {auth} = useContext(AuthContext)
+    const {auth} = useContext(AuthContext);
 
 
     return (
