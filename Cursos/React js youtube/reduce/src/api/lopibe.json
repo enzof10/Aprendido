@@ -1,0 +1,50 @@
+{
+    "bebidas":{
+        "fernet":
+            {
+                "marca":
+                    {
+                        "branca":[
+                                {
+                                "tamaño":"1000ml",
+                                "precio": 800
+                                },
+                                {
+                                "tamaño":"750ml",
+                                "precio": 500
+                                },
+                                {
+                                "tamaño":"450ml",
+                                "precio": 350
+                                }
+                    ],
+                        "1882":[
+                            {
+                                "tamaño":"1000ml",
+                                "precio": 700
+                                },
+                                {
+                                "tamaño":"750ml",
+                                "precio": 300
+                                }
+                        ]
+                    }
+            }
+        },
+    "ventas": {
+        "clientes":[
+            {
+                "id": 1,
+                "compra": ""
+            },
+            {
+                "id": 2,
+                "compra": ""
+            },
+            {
+                "id": 3,
+                "compra": ""
+            }
+        ]
+    }
+}

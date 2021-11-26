@@ -1,0 +1,74 @@
+
+{
+    "productos": [
+        {
+            "id":1,
+            "nombre":"zapatilla Adidas",
+            "precio":"2000",
+            "talle":[
+                {   
+                    "numero":23,
+                    "medida":[
+                        {
+                            "largo":97
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":2,
+            "nombre":"zapatilla Nike",
+            "precio":"3000",
+            "talle":[
+                {   
+                    "numero":37,
+                    "medida":[
+                        {
+                            "largo":121
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":3,
+            "nombre":"zapatilla Puma",
+            "precio":"2400",
+            "talle":[
+                {   
+                    "numero":41,
+                    "medida":[
+                        {
+                            "largo":106
+                        }
+                    ]
+                },
+                {  
+                    "numero":44,
+                    "medida":[
+                        {
+                            "largo":102
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":4,
+            "nombre":"zapatilla Diadora",
+            "precio":"1500",
+            "talle":[
+                {   
+                    "numero":41,
+                    "medida":[
+                        {
+                            "largo":121
+                        }
+                    ]
+               }
+            ]   
+        }
+    ]
+}
+

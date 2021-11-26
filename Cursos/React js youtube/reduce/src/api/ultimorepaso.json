@@ -1,0 +1,64 @@
+{
+    "productos":{
+        "procesadores":[
+            {
+                "marca": "amd",
+                "serie":[
+                {
+                    "3": 2200
+                },
+                {
+                    "5": 3600
+                },
+                {
+                    "7": 4200
+                },
+                {
+                    "9": 5950
+                }
+                ]
+            },
+            {
+                "marca": "intel",
+                "serie":[
+                    {
+                        "i3": 3200
+                    },
+                    {
+                        "i5": 4700
+                    },
+                    {
+                        "i7": 6200
+                    },
+                    {
+                        "i9": 9900
+                    }
+                ]
+            }
+        ],
+        "placasVideo":{
+            "marca":{
+                "nvidia":[
+                    {
+                        "modelo": "gtx",
+                        "serie": "1660 Super",
+                        "precio": 180.000
+                    },
+                    {
+                        "modelo": "rtx",
+                        "serie": "3070ti",
+                        "precio": 250.000
+                    },
+                    {
+                        "modelo": "gtx",
+                        "serie": 1650,
+                        "precio": 100.000
+                    }
+                ]
+            }
+        }
+    },
+    "ventas": {
+        "producto": ""
+    }
+}
