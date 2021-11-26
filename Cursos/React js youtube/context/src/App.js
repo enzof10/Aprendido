@@ -9,11 +9,11 @@ function App() {
     <div className="App">
       <CrudProvider>
         <CrudApi/>
+      </CrudProvider>
         <hr/>
         <MyPageContext/>
         <hr/>
         <MyPage/>
-      </CrudProvider>
     </div>
   );
 }

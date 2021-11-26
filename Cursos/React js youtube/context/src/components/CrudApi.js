@@ -7,7 +7,7 @@ import Message from './Message';
 
 
 export const CrudApi = () => {
-    const {db, loading, error} = useContext(CrudContext)
+    const { db, loading, error } = useContext(CrudContext)
 
     return (
         <div>
