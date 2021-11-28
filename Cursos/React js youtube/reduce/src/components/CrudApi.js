@@ -13,8 +13,6 @@ export const CrudApi = () => {
     const [state, dispatch] = useReducer(crudReducer, crudInitialState);
     const { db } = state;
     
-
-
     // const [db, setDb] = useState(null);
     // creo las variables para loader y mensaje para renderizar 
     const [error, setError] = useState(null);
@@ -66,8 +64,6 @@ export const CrudApi = () => {
     const createData=(objetoFormDeCrudForm)=>{
         let api = helpHttp();
         let url = "http://localhost:5000/santos";
-        console.log("1-objeto en creade data crudapi: ", objetoFormDeCrudForm)
-       
     //espero recibir el contenido en aplicacion/json, si no, no funciona
     // algunas api soportan esto y otras no
         let options= {

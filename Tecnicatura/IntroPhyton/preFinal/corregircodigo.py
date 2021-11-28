@@ -13,7 +13,7 @@ micadena = 'Este texto #contiene& mas &de 59 letras (alphanumericos )y menos de 
 numero = []
 letras = []
 signos = []
-signosArray =[" ", "#", "&", ")", "(",]
+signosArray =[" ", "#", "&", ")","(",]
 for caracter in micadena:
     if caracter.isdigit():
         numero.append(caracter)
