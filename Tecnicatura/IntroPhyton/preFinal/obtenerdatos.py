@@ -76,8 +76,41 @@ contador_cedes(mis_datos, 20)
 #, puesto que implica usar una mala practica que es un break
 
 
+# %%
+def leer_datos(nombre_archivo):
+    ''' Devuelve una lista de diccionarios con la información del datos del archivo especificado '''
+    import csv
+    
+    datos_dict = []
+    try:
+        f = open(nombre_archivo, 'rt', encoding='utf8')
+        filas = csv.reader(f)
+        cabecera = next(filas)
+        for fila in filas:
+            item =  dict(zip(cabecera,fila))
+            datos_dict.append(item)
+        f.close()
+    except Exception as e:
+        datos_dict.append(f'A sucedido un Error {e}')
+    finally:
+        return datos_dict
+
+mis_datos = leer_datos('clubes.csv')
+
+def ordenar_por_id(diccionario):
+    """"Recibe un diccionario que tenga claves de id y lo devuelve ordenado por sus valores"""
+
+for diccionario in mis_datos:
+    diccionario["id"]= int(diccionario["id"]) 
+
+print(type(mis_datos[1]["id"]))
+mis_datos.sort( key=lambda id:id["id"])
+print(mis_datos)
 
 # 3 - Escribir el codigo necesario que imprima los datos ordenados por id,
 #tener en cuenta que el dato es numero pero esta guardado como string
 #por ende para un orden correcto hay que convertirlo primero.
+
+
+
 # %%

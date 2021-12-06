@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+.pixeles{
+    background-color: aquamarine;
+    width: 499px;
+    height: 399px;
+    padding: 20px;
+    border: thick solid rebeccapurple;
+    font-size: 32px;
+}
+.ems{
+    background-color: aquamarine;
+    border: thick solid rebeccapurple;
+    font-size: 24px;
+    padding: 1em .49em;
+}
+.em-child{
+    background-color: salmon;
+    border: thick solid beige;
+    font-size: 2em;
+}
+
+.rems{
+    background-color: aquamarine;
+    border: thick solid rebeccapurple;
+    font-size: 24px;
+    padding: 1rem .49rem;
+}
+.rem-child{
+    background-color: salmon;
+    border: thick solid beige;
+    font-size: 2rem;
+    margin: .49rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.exs{
+    background-color: aquamarine;
+    border: thick solid rebeccapurple;
+    font-size: 24px;
+    padding: 1ex .49ex;
+}
+.ex-child{
+    background-color: salmon;
+    border: thick solid beige;
+    font-size: 2ex;
+}
+
+.chs{
+    background-color: aquamarine;
+    border: thick solid rebeccapurple;
+    width: 10ch;
+
+}
+
+.percentages{
+    background-color: darkcyan;
+    width: 80%;
+}
