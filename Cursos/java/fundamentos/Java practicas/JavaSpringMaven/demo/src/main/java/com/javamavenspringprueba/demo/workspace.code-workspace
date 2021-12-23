@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../../HolaMundo"
+		},
+		{
+			"name": "demo",
+			"path": "../../../../../.."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"src"
+		],
+		"java.project.outputPath": "bin"
+	}
+}
