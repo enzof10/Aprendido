@@ -7,12 +7,19 @@ public class Empleado extends Persona{
     private double sueldo;
     private static int contadorEmpleado;
 
-
+    public Empleado(){
+        // super(); esta implicito siempre si mando a llamar el constructor vacio desde otro constructor con this
+        this.idEmpleado = ++ Empleado.contadorEmpleado;
+    }
 
     public Empleado(String nombre, double sueldo) {
-        super(nombre);
+        // super(nombre);
         // para saber que es un atributo estatico antepongo el nombre de la clase
-        this.idEmpleado = ++ Empleado.contadorEmpleado;
+        // los atributos estaticos se asocian con la clase  no con los objetos
+        // this.idEmpleado = ++ Empleado.contadorEmpleado;
+        this();
+        // puedo inicializar this.nombre como si fuese atributo de esta clase porque en la clase padre esta como protected
+        this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
