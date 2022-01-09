@@ -1,24 +1,29 @@
 package com.gm.mundopc.test;
 
-import com.gm.mundopc.Computadora;
-import com.gm.mundopc.Monitor;
-import com.gm.mundopc.Orden;
-import com.gm.mundopc.Raton;
-import com.gm.mundopc.Teclado;
+// import com.gm.mundopc.Computadora;
+// import com.gm.mundopc.Monitor;
+// import com.gm.mundopc.Orden;
+// import com.gm.mundopc.Raton;
+// import com.gm.mundopc.Teclado;
+import com.gm.mundopc.*;
 
 public class MundoPcTest {
     public static void main(String[] args) {
-        Teclado teclado1 = new Teclado("usb", "sanyo");
-        Raton raton1 = new Raton("ratonusb", "raton sanyo");
-        Monitor monitor1 = new Monitor("monitor algo", 12.42);
+        Teclado tecladoHP = new Teclado("bluetooh", "HP");
+        Raton ratonHP = new Raton("bluetooh", "HP");
+        Monitor monitorHP = new Monitor("HP", 12.42);
+        Computadora computadoraHP = new Computadora("computadora HP", monitorHP, tecladoHP, ratonHP);
+       
 
-        Computadora computadora1 = new Computadora("compu1", monitor1, teclado1, raton1);
-        Computadora computadora2 = new Computadora("compu1", monitor1, teclado1, raton1);
-
+        Teclado tecladoGamer = new Teclado("bluetooh", "Gamer");
+        Raton ratonGamer = new Raton("bluetooh", "Gamer");
+        Monitor monitorGamer = new Monitor("Gamer", 12.42);
+        Computadora computadoraGamer = new Computadora("computadora Gamer", monitorGamer, tecladoGamer, ratonGamer);
+       
         Orden orden1 = new Orden();
+        orden1.agregarComputadora(computadoraGamer);
+        orden1.agregarComputadora(computadoraHP);
 
-        orden1.agregarComputadora(computadora1);
-
-        orden1.toString();
+        orden1.mostrarOrden();
     }
 }
