@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public interface IClienteService {
-    // crear, que devuelve un objeto del tipo clienten y devuelve un objeto del tipo cliente
+    // crear, que devuelve un objeto del tipo clienten y recibe un objeto del tipo cliente
     Cliente crear(Cliente cliente);
 
     Cliente actualizar(Cliente cliente);
