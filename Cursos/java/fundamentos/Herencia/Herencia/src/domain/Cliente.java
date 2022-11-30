@@ -9,9 +9,9 @@ public class Cliente extends Persona{
     private static int contadorCliente;
 
 
-    public Cliente(String nombre, char genero, int edad, String direccion, boolean vip) {
+    public Cliente(Date fechaRegistro, String nombre, char genero, int edad, String direccion, boolean vip) {
         super(nombre, genero, edad, direccion);
-        this.fechaRegistro = new Date();
+        this.fechaRegistro = fechaRegistro;
         this.idCliente = ++ Cliente.contadorCliente;
         this.vip = vip;
     }
@@ -20,7 +20,6 @@ public class Cliente extends Persona{
     public int getIdCliente() {
         return idCliente;
     }
-
 
     public Date getFechaRegistro() {
         return fechaRegistro;
@@ -40,5 +39,15 @@ public class Cliente extends Persona{
     public void setVip(boolean vip) {
         this.vip = vip;
     }
+
+
+    @Override
+    public String toString() {
+        return "Cliente [fechaRegistro=" + fechaRegistro + ", idCliente=" + idCliente + ", vip=" + vip + "]" + super.toString();
+    }
+
+
+    
+
 
 }

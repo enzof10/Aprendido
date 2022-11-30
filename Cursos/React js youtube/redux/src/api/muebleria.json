@@ -1,0 +1,26 @@
+{
+    "muebles":[{
+        "id":1,
+        "sillas":[
+            {
+                "madera":"pino",
+                "tamaños":[
+                    
+                ]
+            }
+        ]
+       },
+       {
+           "id":2,
+           "mesas":[]
+       },
+       {
+           "id":3,
+           "silloes":[]
+       }
+
+
+],
+    "stock":[],
+    "ventas":[]
+}

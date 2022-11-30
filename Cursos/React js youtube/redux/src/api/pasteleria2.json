@@ -1,0 +1,71 @@
+{
+    "facturas":[
+        {
+            "medidalunas":[
+                {
+                    "gusto":"dulce"
+                },
+                {
+                    "gusto" : "salada"
+                }
+            ],
+            "cañoncitos":[
+                {
+                    "gustos":"con dlc"
+                },
+                {
+                    "gustos":"con crema"
+                },
+                {
+                    "gustos":"con crema pastelera"
+                }
+            ],
+            "tortitas":[
+                {
+                    "gustos": "con crema pastelera"
+                },
+                {
+                    "gustos":"con menbrillo"
+                },
+                {
+                    "gustos":"con crema pastelera y menbrillo"
+                }
+            ],
+            "roscas":[
+                {
+                    "gustos":"glacesadas"
+                },
+                {
+                    "gustos":"con azucar"
+                },
+                {
+                    "gustos":"con chocolate"
+                },
+                {
+                    "gustos":"rellenas con dlc"
+                },
+                {
+                    "gustos":"con chocolate blanco"
+                }
+            ]
+            
+        }
+    ],
+    "hojaldre" :[
+        {
+            "bizcochitos": [
+                {
+                    "gustos" :"salados"
+                },
+                {
+                    "gustos":"dulces"
+                }
+            ],
+            "milhoja": [
+                {
+                    "el que lee es puto":"jajaja"
+                }
+            ]
+        }
+    ]
+}
